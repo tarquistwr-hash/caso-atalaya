@@ -1,0 +1,30 @@
+MIT License (código) — la documentación se licencia bajo CC BY-NC 4.0 (ver README).
+
+Copyright (c) 2026 Alejandro Tarquis Melgares
+
+Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia
+del código de este software y los archivos de documentación asociados al código
+(los "Componentes de Software"), para utilizar los Componentes de Software sin
+restricción, incluyendo sin limitación los derechos de uso, copia, modificación,
+fusión, publicación, distribución, sublicencia y/o venta de copias del software,
+y para permitir a las personas a las que se les proporcione el software hacer lo
+mismo, sujeto a las siguientes condiciones:
+
+El aviso de copyright anterior y este aviso de permiso se incluirán en todas las
+copias o partes sustanciales del software.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITA, INCLUYENDO PERO NO LIMITÁNDOSE A LAS GARANTÍAS DE COMERCIABILIDAD,
+IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES
+O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA
+RESPONSABILIDAD.
+
+---
+
+DOCUMENTACIÓN Y DOCUMENTOS DE GESTIÓN (carpetas docs/ y deliverables/):
+Licenciados bajo Creative Commons Reconocimiento-NoComercial 4.0 Internacional
+(CC BY-NC 4.0). Puedes leer, citar y compartir con atribución, no con fines
+comerciales. Texto completo: https://creativecommons.org/licenses/by-nc/4.0/deed.es
+
+La estructura sigue ISO/IEC 27001:2022. El texto de la norma es propiedad de
+ISO/IEC y no se reproduce en este repositorio.

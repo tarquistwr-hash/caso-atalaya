@@ -1,0 +1,26 @@
+codigo,titulo,dominios,i_personas,i_patrimonio,i_privacidad,i_legal,probabilidad,propietario
+RSC-001,Captación de un miembro joven de la familia para obtención de inteligencia,Ambos,4,3,3,2,4,Jefe de seguridad
+RSC-002,Exposición de rutinas en tiempo real por publicaciones de la familia y su entorno,Ambos,3,2,3,1,4,Repr. de la propiedad
+RSC-003,Compromiso de dispositivo personal de un miembro de la familia,Ambos,3,2,4,2,3,Jefe de seguridad
+RSC-004,Filtración involuntaria por mensajería personal del círculo de confianza,Digital→Físico,3,2,3,1,3,Dirección General
+RSC-005,Compromiso del correo personal del gestor de los asuntos de Irlanda (BEC),Digital,1,4,3,2,3,Resp. financiero
+RSC-006,Suplantación de asesor o proveedor para desviar una transferencia,Digital,1,4,2,2,3,Resp. financiero
+RSC-007,Fuga de información fiscal y patrimonial en tránsito,Digital,2,3,3,3,3,Resp. financiero
+RSC-008,Abuso o compromiso de las cuentas privilegiadas del MSP,Ambos,3,3,4,2,2,Jefe de seguridad
+RSC-009,Exposición de CCTV y domótica de la residencia a internet,Ambos,4,2,4,2,3,Jefe de seguridad
+RSC-010,Suplantación del principal ante la banca mediante voz sintética,Digital,1,4,2,1,2,Resp. financiero
+RSC-011,Copia de información por acceso físico no controlado en la residencia,Ambos,3,3,3,2,4,Jefe de seguridad
+RSC-012,Pérdida o robo de dispositivo en viaje con información sin cifrar,Ambos,3,3,3,2,3,Jefe de seguridad
+RSC-013,Ransomware o pérdida del servidor y NAS,Digital,1,3,3,2,3,Dirección General
+RSC-014,Abuso o coacción de la identidad digital delegada del principal,Digital,2,4,3,2,2,Dirección General
+RSC-015,Agregación OSINT del patrimonio y señalamiento público,Digital→Físico,3,2,3,1,4,Repr. de la propiedad
+RSC-016,Envío de información confidencial a destinatario erróneo,Digital,1,2,2,2,3,Dirección General
+RSC-017,Indisponibilidad temporal de servicios cloud (M365),Digital,1,2,1,1,2,Dirección General
+RSC-018,Inejecución sistemática de los controles físicos existentes de la residencia,Ambos,4,3,3,1,4,Jefe de seguridad
+RSC-019,Transporte y entrega de efectivo y valores en mano sin protocolo,Ambos,4,4,2,3,3,Resp. financiero
+RSC-020,"Acceso de obras, reparaciones y contratas sin planificación ni acreditación",Ambos,3,3,3,2,4,Jefe de seguridad
+RSC-021,Introducción de terceros desconocidos en la residencia por los hijos,Ambos,4,3,3,1,4,Repr. de la propiedad
+RSC-022,Ausencia de preparación de seguridad en destino durante los desplazamientos,Ambos,4,2,2,1,3,Jefe de seguridad
+RSC-023,Documentación patrimonial en papel dispersa y sin control,Ambos,1,3,3,3,4,Dirección General
+RSC-024,Obsolescencia técnica del proveedor informático de referencia,Digital,1,3,3,2,3,Dirección General
+RSC-025,Exposición de la familia en desplazamientos rutinarios por fallos de coordinación,Ambos,4,2,1,1,3,Jefe de seguridad

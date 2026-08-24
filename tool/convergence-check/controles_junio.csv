@@ -1,0 +1,65 @@
+id_control,id_riesgo,descripcion,dominio,estado,evidencia,periodicidad_dias,fecha_ultima_verificacion
+C-001,RSC-001,"Acuerdo familiar de exposición pública firmado, con reglas concretas sobre qué no se publica",ORGANIZATIVO,IMPLEMENTADO,EV-2027-001,365,20/02/2027
+C-002,RSC-001,"Canal de comunicación de contactos sospechosos accesible a los hijos, sin sanción asociada",ORGANIZATIVO,IMPLEMENTADO,EV-2027-002,365,20/02/2027
+C-003,RSC-001,Cuaderno de indicios con revisión semanal conjunta de observaciones físicas y digitales,ORGANIZATIVO,IMPLEMENTADO,EV-2027-003,180,10/04/2027
+C-004,RSC-001,Registro nominal de vehículos y personas observadas en el entorno de la finca,FISICO,IMPLEMENTADO,EV-2027-004,180,10/04/2027
+C-005,RSC-001,Configuración de privacidad y revisión periódica de las cuentas públicas de los hijos,DIGITAL,IMPLEMENTADO,EV-2027-005,90,15/05/2027
+C-006,RSC-002,"Publicación diferida acordada: nada en tiempo real, mínimo 48 horas",ORGANIZATIVO,IMPLEMENTADO,EV-2027-006,365,20/02/2027
+C-007,RSC-002,Línea base OSINT y revisión trimestral de la exposición pública de la familia,DIGITAL,IMPLEMENTADO,EV-2027-007,90,15/05/2027
+C-008,RSC-002,Regla de discreción en accesos y salidas de la finca para personal e invitados,FISICO,IMPLEMENTADO,EV-2027-008,180,10/04/2027
+C-009,RSC-003,"Configuración segura y revisión periódica de dispositivos familiares, con consentimiento",DIGITAL,IMPLEMENTADO,EV-2027-009,90,15/05/2027
+C-010,RSC-003,Pauta de custodia física del dispositivo: no se deja desatendido ni se presta,FISICO,IMPLEMENTADO,EV-2027-010,180,10/04/2027
+C-011,RSC-004,Acuerdos personales de confianza ACU-001/002 con ejemplos concretos de lo que no sale de la casa,ORGANIZATIVO,IMPLEMENTADO,EV-2027-011,365,20/02/2027
+C-012,RSC-004,Canal único y trazable para asuntos de la familia con el círculo histórico,DIGITAL,IMPLEMENTADO,EV-2027-012,365,20/02/2027
+C-013,RSC-005,Revisión y acotación de los poderes notariales de 2015 con asesoría legal,ORGANIZATIVO,IMPLEMENTADO,EV-2027-013,365,20/02/2027
+C-014,RSC-005,Cuenta corporativa nominal con MFA para todo asunto societario; fin del correo personal,DIGITAL,IMPLEMENTADO,EV-2027-014,90,15/05/2027
+C-015,RSC-006,Verificación por segundo canal contra contacto pre-registrado antes de toda orden de pago,ORGANIZATIVO,IMPLEMENTADO,EV-2027-015,180,10/04/2027
+C-016,RSC-006,"Lista de contactos verificados de asesores y proveedores, bajo custodia y revisión semestral",DIGITAL,IMPLEMENTADO,EV-2027-016,180,10/04/2027
+C-017,RSC-007,Canal cifrado acordado con el despacho de Dublín para todo intercambio patrimonial,DIGITAL,IMPLEMENTADO,EV-2027-017,365,20/02/2027
+C-018,RSC-010,La voz no autentica: regla escrita y comunicada a banca y asistente,ORGANIZATIVO,IMPLEMENTADO,EV-2027-018,365,20/02/2027
+C-019,RSC-014,"Registro de actos ejecutados por delegación, con revisión mensual por la Dirección General",DIGITAL,IMPLEMENTADO,EV-2027-019,180,10/04/2027
+C-020,RSC-016,Plantillas y doble comprobación de destinatario para envíos con información Confidencial,ORGANIZATIVO,IMPLEMENTADO,EV-2027-020,180,10/04/2027
+C-021,RSC-008,"Anexo contractual con el MSP: MFA obligatorio, cuentas nominales, registro de sesiones 12 meses",DIGITAL,IMPLEMENTADO,EV-2027-021,365,20/02/2027
+C-022,RSC-008,Custodia física del armario de comunicaciones y registro de accesos al mismo,FISICO,IMPLEMENTADO,EV-2027-022,180,10/04/2027
+C-023,RSC-009,"Segmentación de red: CCTV y domótica fuera de la red de datos, sin exposición a internet",DIGITAL,IMPLEMENTADO,EV-2027-023,90,15/05/2027
+C-024,RSC-009,Control de acceso al grabador y a la sala técnica; registro de quién consulta grabaciones,FISICO,IMPLEMENTADO,EV-2027-024,90,15/05/2027
+C-025,RSC-011,Zonificación interior de la residencia y regla de acompañamiento por zonas,FISICO,IMPLEMENTADO,EV-2027-025,180,10/04/2027
+C-026,RSC-011,"Red separada para invitados y personal, sin acceso al NAS ni a los sistemas de la oficina",DIGITAL,IMPLEMENTADO,EV-2027-026,90,15/05/2027
+C-027,RSC-012,"Cifrado y borrado remoto verificados antes de cada salida, con registro de la verificación",DIGITAL,IMPLEMENTADO,EV-2027-027,180,10/04/2027
+C-028,RSC-012,Dotación de viaje diferenciada: equipo limpio para destinos de riesgo,FISICO,IMPLEMENTADO,EV-2027-028,180,10/04/2027
+C-029,RSC-022,"Ficha de seguridad de destino previa a la reserva: alojamiento, entorno, servicios y contactos locales",ORGANIZATIVO,IMPLEMENTADO,EV-2027-029,180,10/04/2027
+C-030,RSC-022,Reconocimiento previo o contacto con servicio local en destinos de riesgo alto,FISICO,PLANIFICADO,,180,
+C-031,RSC-022,Restricción de difusión del itinerario: lista cerrada de destinatarios y sin publicación previa,DIGITAL,IMPLEMENTADO,EV-2027-030,90,15/05/2027
+C-032,RSC-013,Copias 3-2-1 con una copia fuera de línea y prueba de restauración semestral documentada,DIGITAL,IMPLEMENTADO,EV-2027-031,180,10/04/2027
+C-033,RSC-013,Custodia física de la copia fuera de línea en ubicación distinta a la oficina,FISICO,IMPLEMENTADO,EV-2027-032,180,10/04/2027
+C-034,RSC-018,Lista de verificación de cierre firmada al final de cada jornada: alarma conectada y aberturas comprobadas,ORGANIZATIVO,IMPLEMENTADO,EV-2027-033,180,10/04/2027
+C-035,RSC-018,"Contactos de apertura en aberturas secundarias, integrados en la señal de armado del sistema",FISICO,IMPLEMENTADO,EV-2027-034,90,10/01/2027
+C-036,RSC-018,"Supervisión técnica del armado: registro automático de conexión y desconexión, con alerta si no se arma",DIGITAL,IMPLEMENTADO,EV-2027-035,90,05/01/2027
+C-037,RSC-018,Rondas con puntos de paso registrados y revisión mensual de cumplimiento,FISICO,IMPLEMENTADO,EV-2027-036,180,15/09/2026
+C-038,RSC-019,"Doble validación de toda disposición de efectivo por encima del umbral, con registro previo",ORGANIZATIVO,IMPLEMENTADO,EV-2027-037,180,10/04/2027
+C-039,RSC-019,"Trazabilidad del movimiento: albarán o registro firmado en origen y destino, conciliado en 24 horas",DIGITAL,IMPLEMENTADO,EV-2027-038,180,10/04/2027
+C-040,RSC-019,"Protocolo de transporte: portador rotatorio, ruta y horario variables, acompañamiento por encima del umbral",FISICO,IMPLEMENTADO,EV-2027-039,180,10/04/2027
+C-041,RSC-019,Clasificación Restringida de la existencia y el calendario de los movimientos; difusión mínima,ORGANIZATIVO,IMPLEMENTADO,EV-2027-040,365,20/02/2027
+C-042,RSC-020,"Planificación previa obligatoria de todo trabajo: lista nominal, fechas, horario y alcance",ORGANIZATIVO,IMPLEMENTADO,EV-2027-041,180,10/04/2027
+C-043,RSC-020,Acreditación nominal con identificación verificada y acompañamiento en zonas sensibles,FISICO,IMPLEMENTADO,EV-2027-042,90,15/05/2027
+C-044,RSC-020,"Registro de entradas y salidas de contratas, conservado y revisado mensualmente",DIGITAL,IMPLEMENTADO,EV-2027-043,180,10/04/2027
+C-045,RSC-021,"Norma de aviso previo de invitados acordada con los hijos, con nombre y hora",ORGANIZATIVO,IMPLEMENTADO,EV-2027-044,365,20/02/2027
+C-046,RSC-021,"Zona social delimitada para visitas no verificadas, sin acceso al resto de la residencia",FISICO,IMPLEMENTADO,EV-2027-045,365,20/02/2027
+C-047,RSC-021,Registro de visitas en el sistema de acceso y cruce semanal con el cuaderno de indicios,DIGITAL,PLANIFICADO,,180,
+C-048,RSC-023,"Inventario documental con ubicación, responsable y plazo de conservación de cada serie",ORGANIZATIVO,IMPLEMENTADO,EV-2027-046,90,15/05/2027
+C-049,RSC-023,Custodia en armario ignífugo con llave controlada; retirada del papel de zonas comunes,FISICO,IMPLEMENTADO,EV-2027-047,180,10/04/2027
+C-050,RSC-023,Digitalización con clasificación y control de acceso por rol; destrucción certificada del papel redundante,DIGITAL,IMPLEMENTADO,EV-2027-048,90,15/05/2027
+C-051,RSC-024,Verificación técnica independiente anual del criterio y la configuración del MSP,ORGANIZATIVO,IMPLEMENTADO,EV-2027-049,365,20/02/2027
+C-052,RSC-024,"Línea base de configuración documentada y contrastada, revisada tras cada cambio relevante",DIGITAL,IMPLEMENTADO,EV-2027-050,90,15/05/2027
+C-053,RSC-025,Protocolo de puntualidad y aviso: confirmación de posición 15 minutos antes de cada recogida,ORGANIZATIVO,IMPLEMENTADO,EV-2027-051,180,10/04/2027
+C-054,RSC-025,"Puntos de espera predefinidos, cubiertos y variables; nunca espera en vía abierta",FISICO,IMPLEMENTADO,EV-2027-052,180,10/04/2027
+C-056,RSC-015,Retirada activa de datos personales y patrimoniales de agregadores y registros consultables,DIGITAL,IMPLEMENTADO,EV-2027-053,90,15/05/2027
+C-057,RSC-015,"Reducción de la señal física asociable al patrimonio: matrículas, rotulación y accesos identificables",FISICO,IMPLEMENTADO,EV-2027-054,180,10/04/2027
+C-058,RSC-005,Custodia física de las escrituras de poder y registro de su entrega y devolución,FISICO,IMPLEMENTADO,EV-2027-055,180,10/04/2027
+C-059,RSC-006,"Verificación presencial obligatoria por encima del umbral superior: la orden se confirma cara a cara, no por canal remoto",FISICO,IMPLEMENTADO,EV-2027-056,180,10/04/2027
+C-060,RSC-007,Custodia y destrucción certificada de los soportes en papel derivados del intercambio con Dublín,FISICO,IMPLEMENTADO,EV-2027-057,180,10/04/2027
+C-061,RSC-010,"Palabra de control acordada y custodiada en papel, verificable fuera de banda ante una orden por voz",FISICO,IMPLEMENTADO,EV-2027-058,180,10/04/2027
+C-062,RSC-010,Bloqueo de órdenes por voz en banca: instrucción permanente firmada ante la entidad,DIGITAL,IMPLEMENTADO,EV-2027-059,365,20/02/2027
+C-063,RSC-014,"Custodia física en caja fuerte de las credenciales y firmas del principal, con registro de retirada",FISICO,IMPLEMENTADO,EV-2027-060,180,10/04/2027
+C-064,RSC-024,"Inventario físico de equipos y elementos de red de la residencia y la oficina, contrastado anualmente",FISICO,IMPLEMENTADO,EV-2027-061,365,20/02/2027
+C-055,RSC-025,Seguimiento de posición del vehículo y aviso automático de desviación sobre el horario previsto,DIGITAL,IMPLEMENTADO,EV-2027-062,90,15/05/2027
