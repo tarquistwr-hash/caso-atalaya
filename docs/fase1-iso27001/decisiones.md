@@ -227,3 +227,10 @@ La conclusión de diseño: este caso no inventa amenazas exóticas para lucirse.
 ---
 
 *Estas decisiones están implementadas en los documentos de [`/deliverables/fase1/`](../../deliverables/fase1/); este documento solo las argumenta. Si lees alguna y piensas "eso en mi organización no colaría", esa conversación es exactamente para lo que existe este caso.*
+
+
+## 24. Revisión documental de septiembre de 2026
+
+Se conserva el soporte en papel de C-039/C-044 y se retira su dominio DIGITAL, sin inventar sistemas. La simulación pasa de 19 a 17 escenarios con cobertura. La confirmación presencial se exige desde 50.000 euros, también para el principal. ACU-004 identifica el anexo MSP; ACU-003 permanece reservado a confidencialidad de la representante. Las conclusiones de privacidad se limitan a lo demostrado y se conserva el seguimiento de medidas y residual pendientes. La fase de implantación no excluye por sí sola incumplimientos ya exigibles.
+
+[Tabla de cambios, comprobaciones y acciones abiertas](correcciones_2026-09.md). Las secciones anteriores conservan el razonamiento histórico; no acreditan cierre de los hallazgos posteriores.

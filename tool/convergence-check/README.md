@@ -24,7 +24,7 @@ Como he comentado, me baso en que la cobertura sea en su "convergencia", esto qu
 - `test_project.py` — el programa que sirve para testear y así comprobar que es eficaz.
 - `riesgos.csv` — es el fichero que contiene los escenarios de riesgo con su valoración.
 - `controles.csv` — es el fichero que contiene los controles antes de su implementación.
-- `controles_junio.csv` — es el fichero que contiene la proyección al cierre del plan de tratamiento, a 30/06/2027.
+- `controles_junio.csv` — demostración ficticia a 30/06/2027 con verificaciones vencidas y controles sin implantar; no acredita ejecución ni proyecta el cierre del plan.
 - `requirements.txt` — los requerimientos para usar este programa en cuestión.
 
 ## Las funciones son:
@@ -56,7 +56,7 @@ python project.py riesgos.csv controles.csv 31/07/2026
 ```
 python project.py riesgos.csv controles_junio.csv 30/06/2027
 ```
-(esta línea mostrará los resultados del sistema ya implementado y en su primera revisión)
+(esta línea mostrará los resultados del estado simulado; no son evidencias de implantación)
 
 ## Limitaciones conocidas
 
@@ -64,16 +64,21 @@ Este validador es mi proyecto final de CS50P y hace exactamente una cosa: leer d
 
 **No valida el vocabulario de entrada.** Los dominios tienen que venir escritos exactamente como `FISICO`, `DIGITAL` u `ORGANIZATIVO`. Si en el CSV aparece `FÍSICO` con tilde, `Fisico` en minúsculas o con un espacio de más, el programa no falla ni avisa: descarta ese control en silencio y el escenario sale como si le faltara cobertura en ese dominio. Lo mismo con los estados. Es la limitación que más me importa, porque el caso entero se apoya en que el vocabulario del registro está cerrado, y el programa no lo comprueba: se fía.
 
-**Una fecha de verificación en el futuro cuenta como válida.** El cálculo mide los días transcurridos desde la última verificación y los compara con la periodicidad. Si la fecha es posterior a la fecha de corte, el resultado es negativo y pasa el filtro. Un `2027` tecleado donde iba `2026` da conforme un control que nunca se ha verificado.
+**Validez temporal y evidencia.** Desde la revisión 1.1, una fecha de verificación posterior al corte no acredita cobertura. La evidencia debe contener algún carácter distinto de espacios; una periodicidad negativa tampoco acredita cobertura. El día exacto del vencimiento es válido, el siguiente no. Estas condiciones tienen pruebas de regresión.
 
-**«Sin cobertura» tapa dos situaciones distintas.** Un escenario al que no se le ha diseñado ningún control en ninguno de los dos dominios y otro cuyos controles están todos implantados pero con la verificación vencida devuelven la misma respuesta. En este registro son RSC-016 y RSC-018, y la diferencia entre ellos es justo lo que hace interesante el segundo: no es un fallo de operación, es un fallo de verificación. El programa no distingue el motivo; hay que ir al CSV a mirarlo. Es lo primero que cambiaría.
+**«Sin cobertura» tapa dos situaciones distintas.** Un escenario sin controles diseñados y otro con controles implantados pero verificaciones vencidas devuelven la misma respuesta. En la demostración `controles_junio.csv` son RSC-016 y RSC-018. En el registro de corte `controles.csv`, ninguno de los controles está IMPLEMENTADO. El programa no distingue el motivo; hay que ir al CSV a mirarlo.
 
 **No maneja errores.** Si el fichero no existe, si la fecha va en otro formato, si falta una columna o si la periodicidad viene vacía, el programa se corta con el mensaje de error de Python. Lo único que comprueba es que se le pasen tres argumentos.
 
-**Siempre termina con código de salida 0.** Encuentre incumplimientos o no. No se puede encadenar a nada que dependa del resultado.
+**Una ejecución correcta termina con código de salida 0 aunque encuentre falta de cobertura.** Los errores de ejecución sí pueden producir otro código. El programa no ofrece un código específico para automatizar decisiones sobre cobertura.
 
-**Las pruebas cubren las funciones, no los bordes.** `test_project.py` comprueba las cinco funciones con casos representativos. No comprueba el límite exacto de vencimiento (cuando los días transcurridos coinciden con la periodicidad), ni los valores frontera de la clasificación, ni la función `main()`.
+**Las pruebas no cubren todas las entradas.** `test_project.py` comprueba las cinco funciones, el vencimiento exacto y el día posterior, fechas futuras, evidencia en blanco y periodicidades cero y negativas. No cubre todas las entradas malformadas ni todos los caminos de `main()`.
 
-Ninguna de estas cosas invalida los resultados publicados: los CSV de este repositorio están escritos con el vocabulario correcto y las fechas correctas, y lo he comprobado a mano. Pero es precisamente lo que el propio caso dice de los controles físicos: que algo funcione mientras nadie se equivoque no es lo mismo que funcione.
+**El programa comprueba etiquetas, no la justificación del control.** C-039/C-044 se han reclasificado como ORGANIZATIVO porque su soporte es papel; RSC-019/RSC-020 pasan a mostrar falta de cobertura digital en la demostración. El algoritmo conserva su regla. La revisión semántica del registro sigue siendo necesaria.
+
+## Historial
+
+- **1.1 — 20/09/2026:** rechazo de verificaciones futuras y evidencia en blanco; lectura explícita UTF-8; pruebas de regresión; C-006 sincronizado con DOC-008 y REG-001/002; C-039/C-044 reclasificados como ORGANIZATIVO; C-015/C-059 alineados con DOC-007; separación entre registro de corte y demostración futura. Seguimiento de la revisión del corpus en [correcciones](../../docs/fase1-iso27001/correcciones_2026-09.md).
+- **1.0:** publicación inicial.
 
 # NOTA: Todos los escenarios, controles y riesgos son ficticios.

@@ -4,7 +4,7 @@ C-002,RSC-001,"Canal de comunicación de contactos sospechosos accesible a los h
 C-003,RSC-001,Cuaderno de indicios con revisión semanal conjunta de observaciones físicas y digitales,ORGANIZATIVO,IMPLEMENTADO,EV-2027-003,180,10/04/2027
 C-004,RSC-001,Registro nominal de vehículos y personas observadas en el entorno de la finca,FISICO,IMPLEMENTADO,EV-2027-004,180,10/04/2027
 C-005,RSC-001,Configuración de privacidad y revisión periódica de las cuentas públicas de los hijos,DIGITAL,IMPLEMENTADO,EV-2027-005,90,15/05/2027
-C-006,RSC-002,"Publicación diferida acordada: nada en tiempo real, mínimo 48 horas",ORGANIZATIVO,IMPLEMENTADO,EV-2027-006,365,20/02/2027
+C-006,RSC-002,Publicación diferida acordada: ningún contenido que revele ubicación se publica hasta haber abandonado esa ubicación (DOC-008 §3),ORGANIZATIVO,IMPLEMENTADO,EV-2027-006,365,20/02/2027
 C-007,RSC-002,Línea base OSINT y revisión trimestral de la exposición pública de la familia,DIGITAL,IMPLEMENTADO,EV-2027-007,90,15/05/2027
 C-008,RSC-002,Regla de discreción en accesos y salidas de la finca para personal e invitados,FISICO,IMPLEMENTADO,EV-2027-008,180,10/04/2027
 C-009,RSC-003,"Configuración segura y revisión periódica de dispositivos familiares, con consentimiento",DIGITAL,IMPLEMENTADO,EV-2027-009,90,15/05/2027
@@ -13,7 +13,7 @@ C-011,RSC-004,Acuerdos personales de confianza ACU-001/002 con ejemplos concreto
 C-012,RSC-004,Canal único y trazable para asuntos de la familia con el círculo histórico,DIGITAL,IMPLEMENTADO,EV-2027-012,365,20/02/2027
 C-013,RSC-005,Revisión y acotación de los poderes notariales de 2015 con asesoría legal,ORGANIZATIVO,IMPLEMENTADO,EV-2027-013,365,20/02/2027
 C-014,RSC-005,Cuenta corporativa nominal con MFA para todo asunto societario; fin del correo personal,DIGITAL,IMPLEMENTADO,EV-2027-014,90,15/05/2027
-C-015,RSC-006,Verificación por segundo canal contra contacto pre-registrado antes de toda orden de pago,ORGANIZATIVO,IMPLEMENTADO,EV-2027-015,180,10/04/2027
+C-015,RSC-006,Verificación por segundo canal contra contacto prerregistrado para órdenes ≥10.000 € y cambios de beneficiario sin umbral; circuito reforzado del principal conforme a DOC-007 §4,ORGANIZATIVO,IMPLEMENTADO,EV-2027-015,180,10/04/2027
 C-016,RSC-006,"Lista de contactos verificados de asesores y proveedores, bajo custodia y revisión semestral",DIGITAL,IMPLEMENTADO,EV-2027-016,180,10/04/2027
 C-017,RSC-007,Canal cifrado acordado con el despacho de Dublín para todo intercambio patrimonial,DIGITAL,IMPLEMENTADO,EV-2027-017,365,20/02/2027
 C-018,RSC-010,La voz no autentica: regla escrita y comunicada a banca y asistente,ORGANIZATIVO,IMPLEMENTADO,EV-2027-018,365,20/02/2027
@@ -37,12 +37,12 @@ C-035,RSC-018,"Contactos de apertura en aberturas secundarias, integrados en la 
 C-036,RSC-018,"Supervisión técnica del armado: registro automático de conexión y desconexión, con alerta si no se arma",DIGITAL,IMPLEMENTADO,EV-2027-035,90,05/01/2027
 C-037,RSC-018,Rondas con puntos de paso registrados y revisión mensual de cumplimiento,FISICO,IMPLEMENTADO,EV-2027-036,180,15/09/2026
 C-038,RSC-019,"Doble validación de toda disposición de efectivo por encima del umbral, con registro previo",ORGANIZATIVO,IMPLEMENTADO,EV-2027-037,180,10/04/2027
-C-039,RSC-019,"Trazabilidad del movimiento: albarán o registro firmado en origen y destino, conciliado en 24 horas",DIGITAL,IMPLEMENTADO,EV-2027-038,180,10/04/2027
+C-039,RSC-019,"Trazabilidad del movimiento: albarán o registro firmado en origen y destino, conciliado en 24 horas",ORGANIZATIVO,IMPLEMENTADO,EV-2027-038,180,10/04/2027
 C-040,RSC-019,"Protocolo de transporte: portador rotatorio, ruta y horario variables, acompañamiento por encima del umbral",FISICO,IMPLEMENTADO,EV-2027-039,180,10/04/2027
 C-041,RSC-019,Clasificación Restringida de la existencia y el calendario de los movimientos; difusión mínima,ORGANIZATIVO,IMPLEMENTADO,EV-2027-040,365,20/02/2027
 C-042,RSC-020,"Planificación previa obligatoria de todo trabajo: lista nominal, fechas, horario y alcance",ORGANIZATIVO,IMPLEMENTADO,EV-2027-041,180,10/04/2027
 C-043,RSC-020,Acreditación nominal con identificación verificada y acompañamiento en zonas sensibles,FISICO,IMPLEMENTADO,EV-2027-042,90,15/05/2027
-C-044,RSC-020,"Registro de entradas y salidas de contratas, conservado y revisado mensualmente",DIGITAL,IMPLEMENTADO,EV-2027-043,180,10/04/2027
+C-044,RSC-020,"Registro de entradas y salidas de contratas, conservado y revisado mensualmente",ORGANIZATIVO,IMPLEMENTADO,EV-2027-043,180,10/04/2027
 C-045,RSC-021,"Norma de aviso previo de invitados acordada con los hijos, con nombre y hora",ORGANIZATIVO,IMPLEMENTADO,EV-2027-044,365,20/02/2027
 C-046,RSC-021,"Zona social delimitada para visitas no verificadas, sin acceso al resto de la residencia",FISICO,IMPLEMENTADO,EV-2027-045,365,20/02/2027
 C-047,RSC-021,Registro de visitas en el sistema de acceso y cruce semanal con el cuaderno de indicios,DIGITAL,PLANIFICADO,,180,
@@ -56,7 +56,7 @@ C-054,RSC-025,"Puntos de espera predefinidos, cubiertos y variables; nunca esper
 C-056,RSC-015,Retirada activa de datos personales y patrimoniales de agregadores y registros consultables,DIGITAL,IMPLEMENTADO,EV-2027-053,90,15/05/2027
 C-057,RSC-015,"Reducción de la señal física asociable al patrimonio: matrículas, rotulación y accesos identificables",FISICO,IMPLEMENTADO,EV-2027-054,180,10/04/2027
 C-058,RSC-005,Custodia física de las escrituras de poder y registro de su entrega y devolución,FISICO,IMPLEMENTADO,EV-2027-055,180,10/04/2027
-C-059,RSC-006,"Verificación presencial obligatoria por encima del umbral superior: la orden se confirma cara a cara, no por canal remoto",FISICO,IMPLEMENTADO,EV-2027-056,180,10/04/2027
+C-059,RSC-006,Verificación presencial obligatoria para órdenes ≥50.000 €: confirmación cara a cara con el solicitante antes de ejecutar; sin sustitución por canal remoto,FISICO,IMPLEMENTADO,EV-2027-056,180,10/04/2027
 C-060,RSC-007,Custodia y destrucción certificada de los soportes en papel derivados del intercambio con Dublín,FISICO,IMPLEMENTADO,EV-2027-057,180,10/04/2027
 C-061,RSC-010,"Palabra de control acordada y custodiada en papel, verificable fuera de banda ante una orden por voz",FISICO,IMPLEMENTADO,EV-2027-058,180,10/04/2027
 C-062,RSC-010,Bloqueo de órdenes por voz en banca: instrucción permanente firmada ante la entidad,DIGITAL,IMPLEMENTADO,EV-2027-059,365,20/02/2027

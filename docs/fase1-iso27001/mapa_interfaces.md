@@ -48,7 +48,7 @@ flowchart LR
 
 ## Lo que el mapa enseña
 
-**Seis interfaces son originales; cuatro se añadieron en revisión.** Familia, Círculo histórico, Asesores Dublín, MSP, Banca privada y Físico↔Digital describían por dónde circula la *información*. Cinco escenarios del registro —RSC-018, RSC-020, RSC-021, RSC-022 y RSC-025— no encontraban dónde situarse porque el alcance original no recogía por dónde circulan *personas*. Servicios contratados, Contratas y trabajos, Entorno social y Proveedores de viaje cubren esa laguna (hallazgo HD-03, SGSI-DOC-010 §4.1).
+**Seis interfaces son originales; cuatro se añadieron en revisión.** Familia, Círculo histórico, Asesores Dublín, MSP, Banca privada y Físico↔Digital describían por dónde circula la *información*. Cinco escenarios del registro —RSC-018, RSC-020, RSC-021, RSC-022 y RSC-025— no encontraban dónde situarse porque el alcance original no recogía por dónde circulan *personas*. Servicios contratados, Contratas y trabajos, Entorno social y Proveedores de viaje cubren esa laguna (hallazgo HD-04, SGSI-DOC-010 §4.1).
 
 **La interfaz que no admite contrato es la que produjo el cuasi-incidente.** Entorno social no se gestiona con cláusulas ni acuerdos formales — se gestiona por acuerdo con la familia y por diseño del espacio (SGSI-DOC-006 §8). Es la única interfaz de las diez cuyo control depende enteramente del cumplimiento voluntario, y es, literalmente, por donde entró RSC-001.
 

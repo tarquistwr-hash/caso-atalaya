@@ -26,13 +26,13 @@ def es_grave(categoria):
 def esta_cubierto(estado, evidencia, fecha_verificacion, periodicidad_dias, hoy):
     if estado != "IMPLEMENTADO":
         return False
-    if evidencia == "":
+    if not evidencia.strip():
         return False
     if fecha_verificacion == "":
         return False
     resultado_fecha = datetime.strptime(fecha_verificacion, "%d/%m/%Y")
     transcurridos = (hoy - resultado_fecha).days
-    return transcurridos <= periodicidad_dias
+    return 0 <= transcurridos <= periodicidad_dias
 
 
 def tiene_convergencia(controles, hoy):
@@ -71,10 +71,10 @@ def diagnostico(controles, hoy):
 def main():
     if len(sys.argv) != 4:
         sys.exit("Recuerde que tiene que usar: python project.py riesgos.csv controles.csv DD/MM/AAAA")
-    with open(sys.argv[1]) as archivo:
+    with open(sys.argv[1], encoding="utf-8-sig", newline="") as archivo:
         lector = csv.DictReader(archivo)
         riesgos = list(lector)
-    with open(sys.argv[2]) as archivo:
+    with open(sys.argv[2], encoding="utf-8-sig", newline="") as archivo:
         lector = csv.DictReader(archivo)
         controles = list(lector)
     hoy = datetime.strptime(sys.argv[3], "%d/%m/%Y")
@@ -93,4 +93,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

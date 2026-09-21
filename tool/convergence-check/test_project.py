@@ -38,6 +38,20 @@ def test_tiene_convergencia():
     assert not tiene_convergencia([control_fisico, control_organizativo], hoy)
 
 
+def test_verificacion_no_admite_futuro_ni_evidencia_en_blanco():
+    hoy = datetime(2026, 7, 31)
+    assert not esta_cubierto("IMPLEMENTADO", "EV-1", "01/08/2026", 90, hoy)
+    assert not esta_cubierto("IMPLEMENTADO", " \t ", "31/07/2026", 90, hoy)
+    assert not esta_cubierto("IMPLEMENTADO", "EV-1", "31/07/2026", -1, hoy)
+    assert esta_cubierto("IMPLEMENTADO", "EV-1", "31/07/2026", 0, hoy)
+    assert not esta_cubierto("IMPLEMENTADO", "EV-1", "30/07/2026", 0, hoy)
+
+
+def test_verificacion_vence_al_dia_siguiente_del_plazo():
+    assert esta_cubierto("IMPLEMENTADO", "EV-1", "02/05/2026", 90, datetime(2026, 7, 31))
+    assert not esta_cubierto("IMPLEMENTADO", "EV-1", "02/05/2026", 90, datetime(2026, 8, 1))
+
+
 def test_diagnostico():
     hoy = datetime(2026, 7, 31)
     control_fisico = {"dominio": "FISICO", "estado": "IMPLEMENTADO", "evidencia": "EV-1", "fecha_ultima_verificacion": "15/07/2026", "periodicidad_dias": 90}

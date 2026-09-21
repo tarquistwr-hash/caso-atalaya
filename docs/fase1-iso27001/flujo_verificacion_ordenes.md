@@ -15,7 +15,7 @@ flowchart TD
     R1["R1 — Doble canal siempre:<br/>verificación por canal DISTINTO al de entrada,<br/>contra la ficha de contactos verificados (§3).<br/>Nunca al contacto que figura en el propio mensaje"]
 
     UMB2{"¿Importe ≥ 50.000 €?"}
-    R3["R3 — Cuatro ojos:<br/>quien prepara ≠ quien valida<br/>(asistente/financiero + Dirección General)"]
+    R3["R3 — Cuatro ojos:<br/>prepara asistente o financiero;<br/>valida la otra persona o Dirección General.<br/>C-059: confirmación presencial del solicitante<br/>antes de ejecutar desde 50.000 €"]
 
     EJEC["Orden ejecutada"]
     R6["R6 — Registro íntegro:<br/>solicitante, canal, verificaciones, validadores, importe.<br/>Revisión mensual por Dirección General"]
@@ -36,7 +36,7 @@ flowchart TD
     R5 -.-> UMB
     R5 -.-> UMB2
 
-    PRINC["Circuito reforzado del principal (§4)<br/>Asistente formaliza por escrito →<br/>el principal confirma presencial o por videollamada<br/>INICIADA por Atalaya (nunca llamada entrante) →<br/>si ≥ 50.000 €, valida también Dirección General (R3)"]
+    PRINC["Circuito reforzado del principal (§4), sin umbral mínimo<br/>Asistente formaliza por escrito.<br/>Menos de 50.000 €: presencia o videollamada<br/>iniciada por Atalaya al dispositivo registrado.<br/>Desde 50.000 €: presencia obligatoria<br/>y validación adicional de Dirección General"]
     START -.->|"si la orden es del principal"| PRINC
     PRINC -.-> UMB
 
@@ -63,4 +63,4 @@ flowchart TD
 
 **Lo que este diagrama no cubre: el efectivo.** Las disposiciones en efectivo y el movimiento físico de valores (RSC-019) no viajan por ningún canal verificable, así que R1-R6 no les aplican — DOC-007 §6 las trata con un juego de reglas propio (E1-E5), que es harina de otro diagrama.
 
-**Aplicación de la regla de convergencia (DOC-004 §6).** E1/E2 (§6) son organizativos, E4 aporta la cobertura física y E3 la digital — la nota de trazabilidad ya está en el propio DOC-007, no se repite aquí.
+**Aplicación de la regla de convergencia (DOC-004 §6).** E1/E2/E3 (§6) son organizativos; E4 aporta protección física. E3 se registra en papel y no acredita cobertura DIGITAL. RSC-019 conserva pendiente ese componente, registrado en HD-09. La vía de urgencia no exime de la confirmación presencial exigible.

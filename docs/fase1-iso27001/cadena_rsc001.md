@@ -53,7 +53,7 @@ flowchart TB
 
 **Y detectó por azar.** Un miembro del servicio de seguridad reconoció un vehículo porque sabía de quién era y con quién andaba — no por la matrícula ni por ningún análisis. Esa capacidad no era repetible ni auditable: dependía de que esa persona estuviera de servicio, se acordara y atara los cabos. Si libra ese día, no se detecta nada. **El control funcionó una vez, y no por diseño.** Esa frase es el argumento fundacional de todo el sistema.
 
-**El tratamiento empuja la detección hacia la izquierda.** La privacidad de las cuentas y el acuerdo de exposición encarecen la aproximación; el canal sin reproche y el aviso previo de invitados la interrumpen; la zona social limita lo que se puede observar dentro; y el cuaderno de indicios garantiza que, si todo lo anterior falla, los indicios de ambos dominios se cruzan **en la semana 4 y no en la 10** (reconstrucción documentada en SGSI-REG-004, hoja «Reconstrucción 2026»).
+**El tratamiento empuja la detección hacia la izquierda.** La privacidad de las cuentas y el acuerdo de exposición encarecen la aproximación; el canal sin reproche y el aviso previo de invitados la interrumpen; la zona social limita lo que se puede observar dentro; y el cuaderno permite cruzar indicios si se registran con suficiente calidad y se revisan; la reconstrucción es condicional y no garantiza detectar el patrón en una semana concreta (reconstrucción documentada en SGSI-REG-004, hoja «Reconstrucción 2026»).
 
 Esas seis semanas de diferencia son el intervalo durante el cual el intermediario mantuvo contacto directo con un menor. Ese intervalo, y no el resultado final, es lo que el sistema reduce.
 
