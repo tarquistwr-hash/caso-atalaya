@@ -12,51 +12,52 @@ Forma parte del [Caso Atalaya](../../README.md), un caso completo de seguridad c
 
 ---
 
-En la gestión de un sistema de gestión de seguridad de la información (SGSI) llega a ser tedioso el comprobar manualmente el estado y la gestión de los controles que se aplican para su correcto desempeño.
+Validador de la regla de convergencia del Caso Atalaya. Recibe el registro de riesgos, el registro de controles y una fecha de corte; filtra los escenarios de nivel Alto y Crítico y comprueba si cada uno tiene cobertura efectiva en el dominio físico y en el digital.
 
-Es por eso que he programado una herramienta para la asistencia en la implementación de un SGSI con metodología ISO 27001, a la que, entregándole un archivo de controles, otro de riesgos y una fecha, filtra los riesgos más graves y comprueba si están tratados en su "convergencia". De no ser así, muestra el lado en el cual le falta la cobertura para una posterior revisión.
+Un control solo cuenta como cobertura si está implantado, tiene evidencia registrada y su verificación está dentro de plazo en la fecha indicada. Los controles organizativos no satisfacen ninguna de las dos patas de la regla. Si falta cobertura, el informe indica en qué dominio, para su revisión posterior.
 
-Como he comentado, me baso en que la cobertura sea en su "convergencia", esto quiere decir que todo riesgo que filtre tiene que cubrir el lado físico y el lado digital. Para filtrarlos he considerado los riesgos etiquetados como "alto" y "crítico", y he desechado los controles organizativos o que no tienen evidencia o verificación en plazo.
+Comprobar esto a mano es viable una vez; con 25 escenarios y 64 controles, deja de hacerse en cuanto el registro crece. Por eso la regla se ejecuta como código.
 
-## Los archivos son:
+## Archivos
 
-- `project.py` — el programa en sí, que ejecuta el código anteriormente mencionado.
-- `test_project.py` — el programa que sirve para testear y así comprobar que es eficaz.
-- `riesgos.csv` — es el fichero que contiene los escenarios de riesgo con su valoración.
-- `controles.csv` — es el fichero que contiene los controles antes de su implementación.
+- `project.py` — el validador.
+- `test_project.py` — pruebas con pytest.
+- `riesgos.csv` — escenarios de riesgo con su valoración.
+- `controles.csv` — controles a fecha de corte (24/07/2026), antes de su implantación.
 - `controles_junio.csv` — demostración ficticia a 30/06/2027 con verificaciones vencidas y controles sin implantar; no acredita ejecución ni proyecta el cierre del plan.
-- `requirements.txt` — los requerimientos para usar este programa en cuestión.
+- `requirements.txt` — dependencias (solo pytest, para las pruebas).
 
-## Las funciones son:
+## Funciones
 
-- `clasificacion` — te dice si el riesgo es crítico, alto, moderado o bajo, calculando el impacto por la probabilidad.
-- `es_grave` — te recoge como válidos los riesgos altos o críticos; sería el primer filtro.
-- `esta_cubierto` — solo recoge los que están implementados, con evidencia y verificación correctas; sería el segundo filtro.
-- `tiene_convergencia` — registra si los riesgos ya filtrados tienen controles o no en su parte física y/o digital (esta función no se usa en el informe).
-- `diagnostico` — devuelve la frase que explica el estado del riesgo.
-- `main` — es la función que recoge los archivos y la fecha entregada y los procesa con las anteriores funciones para imprimir el resultado: una lista que enlaza el código de cada uno de los riesgos filtrados con su estado en cuanto a la implementación física y digital.
+- `clasificacion` — calcula el nivel del riesgo (Crítico, Alto, Moderado o Bajo) a partir del impacto máximo y la probabilidad.
+- `es_grave` — primer filtro: deja pasar solo los riesgos Alto y Crítico.
+- `esta_cubierto` — segundo filtro: un control cuenta solo si está implantado, con evidencia y con la verificación en plazo.
+- `dominios_cubiertos` — indica si el conjunto de controles de un riesgo cubre el dominio físico y el digital.
+- `tiene_convergencia` — devuelve si hay cobertura en ambos dominios.
+- `diagnostico` — devuelve el estado del riesgo: cobertura convergente, falta de cobertura física, falta de cobertura digital o sin cobertura.
+- `main` — lee los ficheros y la fecha, aplica las funciones anteriores e imprime el código de cada riesgo grave con su diagnóstico.
 
-## Decisiones que tomé:
+## Decisiones de diseño
 
-Al principio pensé en poner la fecha actualizada con `datetime.now()`, pero eso haría que la caducidad de los plazos y controles se viese afectada por el momento en el que se realizase el test. Por eso, al final decidí que sea el usuario el que ponga la fecha a comparar.
+**Fecha de corte como argumento.** Usar `datetime.now()` haría que el resultado cambiase según el día de ejecución. La fecha la indica el usuario, de modo que cada ejecución es reproducible.
 
-También puse dos archivos diferentes de controles porque los controles van cambiando; en cambio, el escenario sobre el que actúan estos controles es el mismo.
+**Dos ficheros de controles.** Los controles cambian con el tiempo; el escenario de riesgos sobre el que actúan, no.
 
-He usado fechas de verificación diferentes porque considero que es muy importante tener en cuenta que cada control tiene unos tiempos diferentes y que, por supuesto, si no tiene registro, nada comprueba que exista realmente.
+**Periodicidad por control.** Cada control tiene su propio plazo de verificación. Sin registro de verificación, nada acredita que el control siga funcionando.
 
-Utilicé el cálculo "en bruto" del nivel de riesgo en vez de cogerlo directamente de la columna porque considero que hay menos margen de error: si hubiera un error humano al rellenar esa columna, este método lo destaparía en lugar de arrastrarlo.
+**Nivel de riesgo recalculado.** El nivel se calcula a partir de impacto y probabilidad en lugar de leerlo de la columna del registro: si esa columna tuviera un error humano, el cálculo lo destaparía en lugar de arrastrarlo.
 
-## Para ejecutar el programa:
+## Ejecución
 
 ```
 python project.py riesgos.csv controles.csv 31/07/2026
 ```
-(esta línea mostrará los resultados del sistema antes de implementarse)
+Estado real a fecha de corte: ningún control está implantado, así que ningún escenario alcanza cobertura.
 
 ```
 python project.py riesgos.csv controles_junio.csv 30/06/2027
 ```
-(esta línea mostrará los resultados del estado simulado; no son evidencias de implantación)
+Estado simulado a 30/06/2027, con defectos deliberados para mostrar los cuatro diagnósticos; no es evidencia de implantación.
 
 ## Limitaciones conocidas
 
@@ -72,12 +73,13 @@ Este validador es mi proyecto final de CS50P y hace exactamente una cosa: leer d
 
 **Una ejecución correcta termina con código de salida 0 aunque encuentre falta de cobertura.** Los errores de ejecución sí pueden producir otro código. El programa no ofrece un código específico para automatizar decisiones sobre cobertura.
 
-**Las pruebas no cubren todas las entradas.** `test_project.py` comprueba las cinco funciones, el vencimiento exacto y el día posterior, fechas futuras, evidencia en blanco y periodicidades cero y negativas. No cubre todas las entradas malformadas ni todos los caminos de `main()`.
+**Las pruebas no cubren todas las entradas.** `test_project.py` comprueba las seis funciones auxiliares, el vencimiento exacto y el día posterior, fechas futuras, evidencia en blanco y periodicidades cero y negativas. No cubre todas las entradas malformadas ni todos los caminos de `main()`.
 
 **El programa comprueba etiquetas, no la justificación del control.** C-039/C-044 se han reclasificado como ORGANIZATIVO porque su soporte es papel; RSC-019/RSC-020 pasan a mostrar falta de cobertura digital en la demostración. El algoritmo conserva su regla. La revisión semántica del registro sigue siendo necesaria.
 
 ## Historial
 
+- **1.2 — 24/09/2026:** la lógica común de `tiene_convergencia` y `diagnostico` pasa a `dominios_cubiertos`, con su prueba; salida con tildes («Falta cobertura física»); mensaje de uso simplificado. Resultados idénticos a la 1.1.
 - **1.1 — 20/09/2026:** rechazo de verificaciones futuras y evidencia en blanco; lectura explícita UTF-8; pruebas de regresión; C-006 sincronizado con DOC-008 y REG-001/002; C-039/C-044 reclasificados como ORGANIZATIVO; C-015/C-059 alineados con DOC-007; separación entre registro de corte y demostración futura. Seguimiento de la revisión del corpus en [correcciones](../../docs/fase1-iso27001/correcciones_2026-09.md).
 - **1.0:** publicación inicial.
 
