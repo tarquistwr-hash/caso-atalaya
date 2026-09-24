@@ -1,4 +1,4 @@
-from project import clasificacion, es_grave, esta_cubierto, tiene_convergencia, diagnostico
+from project import clasificacion, es_grave, esta_cubierto, dominios_cubiertos, tiene_convergencia, diagnostico
 from datetime import datetime
 
 
@@ -57,6 +57,15 @@ def test_diagnostico():
     control_fisico = {"dominio": "FISICO", "estado": "IMPLEMENTADO", "evidencia": "EV-1", "fecha_ultima_verificacion": "15/07/2026", "periodicidad_dias": 90}
     control_digital = {"dominio": "DIGITAL", "estado": "IMPLEMENTADO", "evidencia": "EV-2", "fecha_ultima_verificacion": "15/07/2026", "periodicidad_dias": 90}
     assert diagnostico([control_fisico, control_digital], hoy) == "Cobertura convergente"
-    assert diagnostico([control_digital], hoy) == "Falta cobertura fisica"
+    assert diagnostico([control_digital], hoy) == "Falta cobertura física"
     assert diagnostico([control_fisico], hoy) == "Falta cobertura digital"
     assert diagnostico([], hoy) == "Sin cobertura"
+
+
+def test_dominios_cubiertos():
+    hoy = datetime(2026, 7, 31)
+    control_fisico = {"dominio": "FISICO", "estado": "IMPLEMENTADO", "evidencia": "EV-1", "fecha_ultima_verificacion": "15/07/2026", "periodicidad_dias": 90}
+    control_organizativo = {"dominio": "ORGANIZATIVO", "estado": "IMPLEMENTADO", "evidencia": "EV-3", "fecha_ultima_verificacion": "15/07/2026", "periodicidad_dias": 90}
+    assert dominios_cubiertos([control_fisico], hoy) == (True, False)
+    assert dominios_cubiertos([control_organizativo], hoy) == (False, False)
+    assert dominios_cubiertos([], hoy) == (False, False)
