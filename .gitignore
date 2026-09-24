@@ -2,5 +2,6 @@
 /outputs/
 __pycache__/
 *.py[cod]
+.pytest_cache/
 *.inspect.ndjson
 AGENTS.md
