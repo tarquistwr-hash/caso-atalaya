@@ -50,4 +50,4 @@ flowchart TD
 
 **A fecha de corte (24/07/2026), la rama "Cobertura convergente" está vacía.** Ningún control del registro ha alcanzado el estado IMPLEMENTADO; por tanto ningún escenario Alto o Crítico pasa hoy por la casilla ✅. Declararlo es parte de la propia regla (DOC-004 §6): un sistema que se apoya en un requisito verificable tiene que decir cuándo aún no lo cumple, no maquillarlo.
 
-**La regla no se comprueba a mano.** Con 25 escenarios y 64 controles, cruzarlo a ojo se hace una vez y a los seis meses ya no vale. Por eso el diagrama de arriba no es una aspiración: es el código de `project.py` (funciones `clasificacion`, `es_grave`, `esta_cubierto`, `tiene_convergencia`, `diagnostico`) ejecutado sobre `riesgos.csv` y `controles.csv`.
+**La regla no se comprueba a mano.** Con 25 escenarios y 64 controles, cruzarlo a ojo se hace una vez y a los seis meses ya no vale. Por eso el diagrama de arriba no es una aspiración: es el código de `project.py` (funciones `clasificacion`, `es_grave`, `esta_cubierto`, `dominios_cubiertos`, `tiene_convergencia`, `diagnostico`) ejecutado sobre `riesgos.csv` y `controles.csv`.
