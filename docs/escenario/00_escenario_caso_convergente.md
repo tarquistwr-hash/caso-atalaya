@@ -11,7 +11,7 @@
 | Fecha de emisión | 03/04/2026 |
 | Fecha de aprobación | 24/07/2026 |
 | Aprobado por | Comité de Seguridad Convergente |
-| Registro de aprobación | Acta del Comité de 24/07/2026 |
+| Registro de aprobación | Aprobación dentro de la ficción del caso; no se redacta ni publica acta |
 
 **Historial de versiones**
 
