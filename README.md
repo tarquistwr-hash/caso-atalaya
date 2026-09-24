@@ -1,12 +1,17 @@
 # Caso Atalaya — Seguridad convergente para un family office
 
-**Revisión documental de septiembre de 2026.** Se corrigen el validador, la clasificación de controles, las reglas contradictorias y la presentación de privacidad. La revisión conserva abiertas las acciones de diseño y verificación que el caso no ha ejecutado. Cambios y límites: [registro de correcciones](docs/fase1-iso27001/correcciones_2026-09.md).
-
 **Un caso práctico completo de seguridad convergente físico-digital sobre un escenario de gran patrimonio: SGSI ISO/IEC 27001, un validador que ejecuta la regla de convergencia sobre el registro de riesgos, una herramienta de IA para protección de la huella familiar, y gobernanza ISO/IEC 42001 de esa herramienta. Cuatro capas sobre el mismo escenario.**
 
 **EN — Abstract.** A convergent-security case study built on a fictional family office scenario: a full ISO/IEC 27001 ISMS (scenario-based risk methodology, 25-scenario risk register, 93-control SoA, and a convergence rule enforced as a verifiable requirement), a Python validator that executes that rule against the register, an AI agent for family digital-footprint monitoring (planned, not started), and ISO/IEC 42001 governance of that agent. Fictional in its data, real in its substance: every design decision is justified in context. Documentation in Spanish.
 
 > ⚠️ **Escenario íntegramente ficticio.** Personas, sociedades, patrimonios y hechos son inventados y no guardan relación con ninguna persona u organización real. La verosimilitud procede de experiencia profesional real en protección ejecutiva y patrimonial; los datos, no.
+
+## En cinco minutos
+
+- **Qué demuestra:** que un riesgo de gran patrimonio solo está tratado si tiene cobertura efectiva a la vez en el dominio físico y en el digital, y que esa regla se puede comprobar por máquina, no solo declarar.
+- **Qué leer primero:** el [informe ejecutivo para la propiedad](deliverables/fase1/revision_2026-09/SGSIINF001_Informe_Ejecutivo_Propiedad_v1_6.pdf) (visión de dirección) y [la regla de convergencia como árbol de decisión](docs/fase1-iso27001/regla_convergencia.md).
+- **Verlo funcionar:** [vídeo de la herramienta](https://youtu.be/0B5Mc03_dyg) y [`tool/convergence-check`](tool/convergence-check/README.md).
+- **Estado:** capas 1 y 2 publicadas; capas 3 y 4 no iniciadas. El SGSI está en implantación y no simula evidencias de ejecución.
 
 ---
 
@@ -49,7 +54,7 @@ Las capas 1 y 2 se construyen juntas y son inseparables por diseño: la regla de
 │       ├── mapa_interfaces.md            ← las diez interfaces del alcance, dibujadas
 │       ├── regla_convergencia.md         ← la regla de convergencia como árbol de decisión
 │       └── flujo_verificacion_ordenes.md ← el circuito antifraude de DOC-007
-├── deliverables/fase1/                   ← PDF anteriores y revisión de septiembre con Word/Excel y PDF
+├── deliverables/fase1/                   ← README con qué versión leer; PDF de julio y revisión de septiembre (Word/Excel y PDF)
 └── tool/convergence-check/               ← capa 2: el validador
     ├── project.py
     ├── test_project.py
@@ -72,7 +77,7 @@ $ python project.py riesgos.csv controles_junio.csv 30/06/2027
 RSC-001 Cobertura convergente
 RSC-002 Cobertura convergente
 RSC-003 Cobertura convergente
-RSC-004 Falta cobertura fisica
+RSC-004 Falta cobertura física
 RSC-005 Cobertura convergente
 ...
 RSC-016 Sin cobertura
@@ -81,7 +86,7 @@ RSC-019 Falta cobertura digital
 RSC-020 Falta cobertura digital
 ...
 RSC-021 Falta cobertura digital
-RSC-022 Falta cobertura fisica
+RSC-022 Falta cobertura física
 ...
 ```
 
@@ -135,6 +140,10 @@ El porqué de cada una, desarrollado: [`docs/fase1-iso27001/decisiones.md`](docs
 **Estado y fecha de corte.** El caso publica el SGSI **en implantación**, con fecha de corte 24/07/2026. Los plazos de los planes de tratamiento y de la deuda de diseño se cuentan desde ahí. Ningún control del registro de riesgos está en estado implantado, y el sistema lo dice en lugar de disimularlo.
 
 **Qué queda fuera y por qué:** las evidencias de ejecución —actas de comité, informes de auditoría realizados, registros de formación— no se simulan. El **diseño** del ciclo de operación sí está publicado (DOC-010) y sus registros también, con su estructura y vacíos (REG-004, REG-006), porque ahí es donde se ve el criterio. Redactar actas de reuniones que nunca ocurrieron sería ficción sobre ficción. La revisión documental registra las carencias descritas por el propio caso; no inventa una auditoría ni evidencia de ejecución.
+
+## Revisión documental de septiembre de 2026
+
+Se corrigen el validador, la clasificación de controles, las reglas contradictorias y la presentación de privacidad. La revisión conserva abiertas las acciones de diseño y verificación que el caso no ha ejecutado. Cambios y límites: [registro de correcciones](docs/fase1-iso27001/correcciones_2026-09.md).
 
 ## Aviso legal
 
