@@ -17,10 +17,7 @@ def clasificacion(i_personas, i_patrimonio, i_privacidad, i_legal, probabilidad)
 
 
 def es_grave(categoria):
-    if categoria == "Alto" or categoria == "Crítico":
-        return True
-    else:
-        return False
+    return categoria in ("Alto", "Crítico")
 
 
 def esta_cubierto(estado, evidencia, fecha_verificacion, periodicidad_dias, hoy):
@@ -35,7 +32,7 @@ def esta_cubierto(estado, evidencia, fecha_verificacion, periodicidad_dias, hoy)
     return 0 <= transcurridos <= periodicidad_dias
 
 
-def tiene_convergencia(controles, hoy):
+def dominios_cubiertos(controles, hoy):
     fisico_cubierto = False
     digital_cubierto = False
     for control in controles:
@@ -45,32 +42,29 @@ def tiene_convergencia(controles, hoy):
             fisico_cubierto = True
         if control["dominio"] == "DIGITAL":
             digital_cubierto = True
+    return fisico_cubierto, digital_cubierto
+
+
+def tiene_convergencia(controles, hoy):
+    fisico_cubierto, digital_cubierto = dominios_cubiertos(controles, hoy)
     return fisico_cubierto and digital_cubierto
 
 
 def diagnostico(controles, hoy):
-    fisico_cubierto = False
-    digital_cubierto = False
-    for control in controles:
-        if not esta_cubierto(control["estado"], control["evidencia"], control["fecha_ultima_verificacion"], control["periodicidad_dias"], hoy):
-            continue
-        if control["dominio"] == "FISICO":
-            fisico_cubierto = True
-        if control["dominio"] == "DIGITAL":
-            digital_cubierto = True
+    fisico_cubierto, digital_cubierto = dominios_cubiertos(controles, hoy)
     if fisico_cubierto and digital_cubierto:
         return "Cobertura convergente"
-    elif fisico_cubierto and not digital_cubierto:
+    elif fisico_cubierto:
         return "Falta cobertura digital"
-    elif digital_cubierto and not fisico_cubierto:
-        return "Falta cobertura fisica"
+    elif digital_cubierto:
+        return "Falta cobertura física"
     else:
         return "Sin cobertura"
 
 
 def main():
     if len(sys.argv) != 4:
-        sys.exit("Recuerde que tiene que usar: python project.py riesgos.csv controles.csv DD/MM/AAAA")
+        sys.exit("Uso: python project.py riesgos.csv controles.csv DD/MM/AAAA")
     with open(sys.argv[1], encoding="utf-8-sig", newline="") as archivo:
         lector = csv.DictReader(archivo)
         riesgos = list(lector)
