@@ -1,0 +1,142 @@
+[
+  {
+    "codigo": "SGSIACU004",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIACU004_Anexo_MSP_v0_2.docx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIACU004_Anexo_MSP_v0_2.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIDOC001",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIDOC001_Contexto_y_Alcance_v1_8.docx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIDOC001_Contexto_y_Alcance_v1_8.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIDOC002",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIDOC002_Control_Documental_v1_6.docx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIDOC002_Control_Documental_v1_6.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIDOC003",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIDOC003_Politica_Seguridad_Informacion_v1_5.docx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIDOC003_Politica_Seguridad_Informacion_v1_5.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIDOC004",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIDOC004_Metodologia_Gestion_Riesgos_v2_0.docx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIDOC004_Metodologia_Gestion_Riesgos_v2_0.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIDOC005",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIDOC005_Objetivos_Seguridad_v1_7.docx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIDOC005_Objetivos_Seguridad_v1_7.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIDOC006",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIDOC006_Terceros_Circulo_Confianza_v1_7.docx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIDOC006_Terceros_Circulo_Confianza_v1_7.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIDOC007",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIDOC007_Verificacion_Ordenes_v1_7.docx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIDOC007_Verificacion_Ordenes_v1_7.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIDOC008",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIDOC008_Seguridad_Viajes_v1_5.docx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIDOC008_Seguridad_Viajes_v1_5.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIDOC009",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIDOC009_Gestion_Incidentes_v1_6.docx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIDOC009_Gestion_Incidentes_v1_6.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIDOC010",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIDOC010_Auditoria_Revision_Mejora_v1_11.docx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIDOC010_Auditoria_Revision_Mejora_v1_11.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIDOC011",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIDOC011_Ponderacion_Interes_Legitimo_v1_1.docx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIDOC011_Ponderacion_Interes_Legitimo_v1_1.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIDOC012",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIDOC012_EIPD_v1_2.docx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIDOC012_EIPD_v1_2.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIINF001",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIINF001_Informe_Ejecutivo_Propiedad_v1_7.docx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIINF001_Informe_Ejecutivo_Propiedad_v1_7.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIREG001002",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIREG001002_Registro_y_Plan_Riesgos_v2_0.xlsx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIREG001002_Registro_y_Plan_Riesgos_v2_0.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIREG003",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIREG003_Declaracion_Aplicabilidad_v1_10.xlsx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIREG003_Declaracion_Aplicabilidad_v1_10.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIREG004",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIREG004_Cuaderno_Indicios_v1_4.xlsx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIREG004_Cuaderno_Indicios_v1_4.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIREG005",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIREG005_Registro_Requisitos_Legales_v1_5.xlsx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIREG005_Registro_Requisitos_Legales_v1_5.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  },
+  {
+    "codigo": "SGSIREG006",
+    "editable": "deliverables/fase1/revision_2026-09-27/SGSIREG006_No_Conformidades_v1_11.xlsx",
+    "pdf": "deliverables/fase1/revision_2026-09-27/SGSIREG006_No_Conformidades_v1_11.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": true
+  },
+  {
+    "codigo": "SGSIREG008",
+    "editable": "deliverables/fase1/revision_2026-09/SGSIREG008_Registro_Actividades_Tratamiento_v1_1.xlsx",
+    "pdf": "deliverables/fase1/revision_2026-09/SGSIREG008_Registro_Actividades_Tratamiento_v1_1.pdf",
+    "estado": "Borrador",
+    "revisado_27_09": false
+  }
+]

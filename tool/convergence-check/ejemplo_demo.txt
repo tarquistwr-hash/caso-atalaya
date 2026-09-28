@@ -1,0 +1,24 @@
+RSC-001 Cumple cobertura de los dominios aplicables
+RSC-002 Cumple cobertura de los dominios aplicables
+RSC-003 Cumple cobertura de los dominios aplicables
+RSC-004 Falta cobertura física
+RSC-005 Cumple cobertura de los dominios aplicables
+RSC-006 Falta cobertura digital
+RSC-007 Cumple cobertura de los dominios aplicables
+RSC-008 Cumple cobertura de los dominios aplicables
+RSC-009 Cumple cobertura de los dominios aplicables
+RSC-010 Falta cobertura digital
+RSC-011 Cumple cobertura de los dominios aplicables
+RSC-012 Cumple cobertura de los dominios aplicables
+RSC-013 Cumple cobertura de los dominios aplicables
+RSC-014 Evaluación pendiente de dominios
+RSC-015 Cumple cobertura de los dominios aplicables
+RSC-016 Falta cobertura digital
+RSC-018 Sin cobertura en los dominios aplicables
+RSC-019 Cumple cobertura de los dominios aplicables
+RSC-020 Falta cobertura digital
+RSC-021 Cumple cobertura de los dominios aplicables
+RSC-022 Falta cobertura física
+RSC-023 Cumple cobertura de los dominios aplicables
+RSC-024 Cumple cobertura de los dominios aplicables
+RSC-025 Cumple cobertura de los dominios aplicables

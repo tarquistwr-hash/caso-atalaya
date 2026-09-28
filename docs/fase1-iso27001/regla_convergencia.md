@@ -1,53 +1,32 @@
-# La regla de convergencia, dibujada
+# Cobertura de los dominios aplicables
 
-Lo que exige SGSI-DOC-004 §6, y lo que ejecuta literalmente `convergence-check` (capa 2) sobre el registro. No es un párrafo de metodología: es una función. Este diagrama es esa función dibujada.
+Revisión 2.0 · 27/09/2026 · DOC-004 §6 · Borrador pendiente de aprobación.
+
+Se analizan siempre los dominios físico y digital. La cobertura se exige solo en los que intervengan en cada escenario Alto o Crítico. Los controles disponibles no determinan los dominios del escenario.
 
 ```mermaid
 flowchart TD
-    A["Escenario del registro<br/>(SGSI-REG-001)"] --> B{"Nivel de riesgo<br/>¿Alto (6-9) o Crítico (12-16)?"}
-
-    B -- "No —<br/>Bajo o Moderado" --> B1["Fuera del alcance de la regla.<br/>Aceptación conforme a §4.4<br/>(propietario del riesgo)"]
-
-    B -- "Sí" --> C{"¿Tiene cobertura EFECTIVA<br/>en dominio FÍSICO?"}
-    B --> D{"¿Tiene cobertura EFECTIVA<br/>en dominio DIGITAL?"}
-
-    C --> CDEF["Cobertura efectiva =<br/>control implantado<br/>+ evidencia registrada<br/>+ verificación en plazo"]
-    D --> CDEF
-
-    CDEF --> E{"Combinación"}
-
-    E -- "Física SÍ<br/>Digital SÍ" --> R1["✅ Cobertura convergente"]
-    E -- "Física NO<br/>Digital SÍ" --> R2["⚠️ Falta cobertura física"]
-    E -- "Física SÍ<br/>Digital NO" --> R3["⚠️ Falta cobertura digital"]
-    E -- "Física NO<br/>Digital NO" --> R4["🛑 Sin cobertura"]
-
-    N1["Los controles ORGANIZATIVOS<br/>no cuentan para ninguna de las dos patas.<br/>Necesarios, pero no suficientes"]
-    N2["Un control PLANIFICADO,<br/>sin evidencia, o con verificación VENCIDA<br/>no cuenta como cobertura"]
-
-    N1 -.-> CDEF
-    N2 -.-> CDEF
-
-    classDef entrada fill:#1F3864,color:#fff,stroke:#1F3864
-    classDef decision fill:#fff,color:#1F3864,stroke:#1F3864,stroke-width:2px
-    classDef ok fill:#fff,color:#1F3864,stroke:#2E7D32,stroke-width:2px
-    classDef warn fill:#fff,color:#1F3864,stroke:#B8860B,stroke-width:2px
-    classDef bad fill:#fff,color:#1F3864,stroke:#B22222,stroke-width:2px
-    classDef nota fill:#fff,color:#7F7F7F,stroke:#8FAADC,stroke-dasharray: 3 3
-
-    class A entrada
-    class B,C,D,E,CDEF decision
-    class R1 ok
-    class R2,R3 warn
-    class R4 bad
-    class B1,N1,N2 nota
+    A[Escenario del registro] --> B{¿Alto o Crítico?}
+    B -- No --> M[Fuera del filtro de cobertura<br/>Aceptación según DOC-004 §4.4]
+    B -- Sí --> D{¿Dominios justificados?}
+    D -- Pendiente --> P[Evaluación pendiente<br/>No se declara cobertura]
+    D -- Sí --> R[Seleccionar FÍSICO, DIGITAL o ambos<br/>No exigir dominios no aplicables justificados]
+    R --> C[Comprobar cada dominio aplicable<br/>IMPLEMENTADO + evidencia + verificación en plazo<br/>+ alcance GENERAL justificado]
+    C --> E{¿Se cubren todos<br/>los dominios aplicables?}
+    E -- Sí --> OK[Cumple la regla de cobertura<br/>No equivale a aceptar el riesgo residual]
+    E -- No --> F[Indicar qué dominio falta<br/>y el motivo por control]
+    N[CONDICIONADO o PENDIENTE<br/>no acredita cobertura general] -.-> C
+    O[ORGANIZATIVO se informa<br/>no sustituye cobertura física o digital] -.-> C
 ```
 
-## Lo que la regla dice y lo que la regla calla
+**Dos análisis distintos.** El dominio del escenario describe su cadena; el del control, cómo actúa la medida. Una copia digital o una comprobación presencial complementaria no convierten automáticamente el escenario en mixto. Los bloques del Anexo A tampoco deciden esas etiquetas.
 
-**La regla se aplica al escenario, no al control.** Un escenario puede tener cuatro controles físicos y uno digital y cumplir; la confusión contraria —"cada control necesita su gemelo"— produce relleno. Lo único que un control debe declarar es qué eslabón de la cadena rompe.
+**No aplicable y pendiente.** La no aplicabilidad necesita justificación. RSC-014 queda pendiente de precisar el medio de coacción: el programa no inventa ni descarta el dominio físico y no da un resultado favorable.
 
-**"Sin cobertura" no significa una sola cosa.** En la demostración `controles_junio.csv` a 30/06/2027, RSC-016 no tiene controles diseñados y RSC-018 tiene controles que figuran implantados, pero sus verificaciones física y digital han vencido. El único control de RSC-018 que sigue en plazo es organizativo y no satisface la regla. El diagrama no distingue esos motivos: hay que consultar los controles. Este ejemplo es simulado; en el registro de corte de 24/07/2026 ningún control está IMPLEMENTADO.
+**Alcance condicionado.** C-059/C-065 solo actúan desde 50.000 euros; no se suman como cobertura física general. C-016/C-019 conservan pendiente justificar el mecanismo digital. C-062 es una instrucción organizativa al banco.
 
-**A fecha de corte (24/07/2026), la rama "Cobertura convergente" está vacía.** Ningún control del registro ha alcanzado el estado IMPLEMENTADO; por tanto ningún escenario Alto o Crítico pasa hoy por la casilla ✅. Declararlo es parte de la propia regla (DOC-004 §6): un sistema que se apoya en un requisito verificable tiene que decir cuándo aún no lo cumple, no maquillarlo.
+**Motivos.** RSC-016 tiene C-020 organizativo, pero ninguna medida digital computable. En RSC-018 hay medidas físicas y digitales simuladas, pero sus verificaciones han vencido. El modo `--detalle` distingue diseño, implantación, evidencia y vigencia.
 
-**La regla no se comprueba a mano.** Con 25 escenarios y 64 controles, cruzarlo a ojo se hace una vez y a los seis meses ya no vale. Por eso el diagrama de arriba no es una aspiración: es el código de `project.py` (funciones `clasificacion`, `es_grave`, `esta_cubierto`, `dominios_cubiertos`, `tiene_convergencia`, `diagnostico`) ejecutado sobre `riesgos.csv` y `controles.csv`.
+**Resultados.** A fecha de corte (24/07/2026), ninguno de los 24 escenarios filtrados acredita cobertura; RSC-014 conserva la evaluación pendiente. En la demostración del 30/06/2027, 16 cumplen, 7 presentan carencias y 1 está pendiente. [Salida completa](../../tool/convergence-check/ejemplo_demo.txt).
+
+El programa comprueba datos declarados, no abre las evidencias ni sustituye la aceptación del residual. [Justificaciones y deltas](revision_2026-09-27.md).

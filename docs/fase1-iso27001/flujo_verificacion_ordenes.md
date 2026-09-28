@@ -63,4 +63,4 @@ flowchart TD
 
 **Lo que este diagrama no cubre: el efectivo.** Las disposiciones en efectivo y el movimiento físico de valores (RSC-019) no viajan por ningún canal verificable, así que R1-R6 no les aplican — DOC-007 §6 las trata con un juego de reglas propio (E1-E5), que es harina de otro diagrama.
 
-**Aplicación de la regla de convergencia (DOC-004 §6).** E1/E2/E3 (§6) son organizativos; E4 aporta protección física. E3 se registra en papel y no acredita cobertura DIGITAL. RSC-019 conserva pendiente ese componente, registrado en HD-09. La vía de urgencia no exime de la confirmación presencial exigible.
+**Aplicación de DOC-004 v2.0.** E1/E2/E3 son organizativos; E4 aporta protección física. RSC-019 se justifica como físico; el registro en papel no exige crear cobertura digital. HD-09 conserva la carencia de RSC-020. C-059/C-065 son condicionados a órdenes ≥50.000 €; la vía de urgencia no exime de la confirmación presencial exigible.

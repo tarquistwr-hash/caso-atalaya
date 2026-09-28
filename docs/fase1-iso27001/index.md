@@ -1,31 +1,17 @@
-## Estado vigente del caso — actualizado 19/09/2026
+## Estado vigente del repositorio — 27/09/2026
 
-**Entrega documental revisada el 20/09/2026:** [correcciones, comprobaciones y pendientes](correcciones_2026-09.md). El cierre de la fase describe el hito de publicación, no el cierre de los hallazgos detectados después. Los PDF con aprobación pendiente no sustituyen las versiones vigentes citadas abajo.
+[Entrega más reciente](../../deliverables/fase1/revision_2026-09-27/README.md) · [Deltas y verificaciones](revision_2026-09-27.md). Documentación en **Borrador**, pendiente de aprobación dentro del caso. Corte operativo **24/07/2026**, sin evidencias nuevas de implantación. Ningún control del registro está IMPLEMENTADO; la excepción A.8.14 se mantiene separada en la SoA.
 
-**Fases**
-- Fase 1 (pre-bootcamp): escenario + SGSI 27001 + capa RGPD + validador Python. **Cerrada.**
-- Fase 2 (oct 2026 – mar 2027): herramienta de IA sobre el mismo escenario. Capstone del bootcamp. **No iniciada.**
-- Fase 3 (post-bootcamp): gobernanza ISO/IEC 42001 de esa herramienta. **No iniciada.**
+- Capas 1 y 2 publicadas: diseño del SGSI y validador. El hito de publicación de Fase 1 no equivale al cierre de los hallazgos.
+- Herramienta de IA y gobernanza ISO/IEC 42001: sin iniciar.
+- Regla actual: analizar ambos dominios, justificar aplicabilidad y exigir cobertura solo en los aplicables a escenarios Altos/Críticos. RSC-014 sigue pendiente de concretar coacción.
+- HD-02/HD-09 revisadas sin cierre automático; HD-11 recoge justificaciones pendientes. HD-06 incorpora comprobación técnica y espera revisión documental.
+- HD-08/NC-2026-001 y HD-10 siguen abiertas. HD-02/HD-03 conservan vencimiento histórico 24/09/2026, pendiente de decisión en la revisión; no se inventan actas ni eficacia.
+- Toda modificación formal tiene versión e historial. Los documentos previos se conservan y una publicación no sustituye la aprobación.
 
-**Dónde está el sistema**
-- Fecha de corte: 24/07/2026. Ciclo de julio cerrado; ronda RGPD 20/08/2026; verificación cruzada 21-22/08/2026.
-- El sistema está EN IMPLANTACIÓN, no operado: ningún control del registro de riesgos ha alcanzado estado IMPLEMENTADO (la SoA declara por separado la excepción A.8.14), y por tanto ningún escenario alcanza cobertura convergente efectiva.
-- Validador Python publicado en GitHub, con sus limitaciones declaradas en su README.
-
-**Deuda abierta relevante**
-- HD-08: falta contrato de encargado del tratamiento (art. 28 RGPD) con el MSP. Plazo 20/11/2026. SGSI-ACU-004 v0.2 sustituye documentalmente al borrador MSP antes identificado por error como ACU-003; existe como borrador, sin aprobar ni firmar. No se cierra hasta verificación de eficacia.
-- HD-01: controles de la SoA pendientes de trazabilidad (incluido 8.21, reclasificado a deuda documental).
-- HD-09: cobertura digital no acreditada en RSC-019 y RSC-020; sin alta ficticia de controles.
-- HD-10: validación de bases, roles, conservación y riesgo residual de privacidad, pendiente antes de operar.
-- HD-06: comprobación automática SoA ↔ registro, pendiente. Deuda técnica reconocida.
-
-**Reglas permanentes**
-- Este bloque se actualiza al cerrar un hito, nunca a mitad de trabajo.
-- Ningún documento publicado se modifica en silencio: subida de versión, historial y revisión de la cascada.
-- Una acción sin verificación de eficacia no cierra una no conformidad.
 # Fase 1 — SGSI ISO/IEC 27001 · Índice de la documentación
 
-Estado: **ciclo de revisión de julio de 2026 cerrado** (documentación revisada, verificada y aprobada por el Comité de Seguridad Convergente el 24/07/2026, aprobación ficticia dentro del caso), con una **segunda ronda de revisión el 20/08/2026** que cierra el bloque RGPD que la de julio dejaba pendiente, y una **tercera ronda de verificación cruzada el 21-22/08/2026** que comprueba las correcciones de la ronda de julio contra el texto vigente de los `.docx` y cierra un control huérfano detectado en la SoA. Las versiones vigentes tras esa tercera ronda son SGSI-DOC-001 v1.7, DOC-002 v1.4, DOC-003 v1.3, DOC-004 v1.7, DOC-005 v1.6, DOC-006 v1.5, DOC-007 v1.5, DOC-008 v1.4, DOC-009 v1.4, DOC-010 v1.9, DOC-011 v1.0, DOC-012 v1.1, INF-001 v1.5, REG-001/002 v1.6, REG-003 v1.7, REG-004 v1.2, REG-005 v1.4, REG-006 v1.7 y REG-008 v1.0, sobre la ficha de escenario ESC-001 v2.1 (sin cambios en esta ronda). **Fecha de corte del sistema: 24/07/2026** — toda la documentación refleja el estado del SGSI en esa fecha, y los plazos de tratamiento y de deuda de diseño se cuentan desde ahí; las rondas de agosto son documentales (cierran gaps normativos y de trazabilidad, no reabren la implantación). La entrega anterior se conserva en PDF. La revisión de septiembre incluye Word/Excel y PDF en [su índice de entrega](../../deliverables/fase1/revision_2026-09/README.md). Los antecedentes están en [`/deliverables/fase1/`](../../deliverables/fase1/). Este índice explica qué hace cada pieza y en qué orden leerla.
+**Antecedente histórico, no listado de aprobación de la nueva revisión.** Estado: **ciclo de revisión de julio de 2026 cerrado** (documentación revisada, verificada y aprobada por el Comité de Seguridad Convergente el 24/07/2026, aprobación ficticia dentro del caso), con una **segunda ronda de revisión el 20/08/2026** que cierra el bloque RGPD que la de julio dejaba pendiente, y una **tercera ronda de verificación cruzada el 21-22/08/2026** que comprueba las correcciones de la ronda de julio contra el texto vigente de los `.docx` y cierra un control huérfano detectado en la SoA. Las versiones vigentes tras esa tercera ronda son SGSI-DOC-001 v1.7, DOC-002 v1.4, DOC-003 v1.3, DOC-004 v1.7, DOC-005 v1.6, DOC-006 v1.5, DOC-007 v1.5, DOC-008 v1.4, DOC-009 v1.4, DOC-010 v1.9, DOC-011 v1.0, DOC-012 v1.1, INF-001 v1.5, REG-001/002 v1.6, REG-003 v1.7, REG-004 v1.2, REG-005 v1.4, REG-006 v1.7 y REG-008 v1.0, sobre la ficha de escenario ESC-001 v2.1 (sin cambios en esta ronda). **Fecha de corte del sistema: 24/07/2026** — toda la documentación refleja el estado del SGSI en esa fecha, y los plazos de tratamiento y de deuda de diseño se cuentan desde ahí; las rondas de agosto son documentales (cierran gaps normativos y de trazabilidad, no reabren la implantación). La entrega anterior se conserva en PDF. La revisión de septiembre incluye Word/Excel y PDF en [su índice de entrega](../../deliverables/fase1/revision_2026-09/README.md). Los antecedentes están en [`/deliverables/fase1/`](../../deliverables/fase1/). Este índice explica qué hace cada pieza y en qué orden leerla.
 
 > **Nota sobre la clasificación:** los documentos van marcados «Interna», «Confidencial» o «Restringida» porque esa es su clasificación *dentro de la ficción* — una SoA, un registro de riesgos o un RAT reales jamás se publican. Este repositorio puede mostrarlos precisamente porque el caso es ficticio. El marcado se conserva porque forma parte de lo que se está demostrando: cómo se clasifica de verdad.
 
@@ -43,9 +29,9 @@ Si solo vas a leer tres cosas: el [escenario](../escenario/00_escenario_caso_con
 
 Y si quieres ver la regla funcionando en lugar de leerla, el validador está en [`tool/convergence-check/`](../../tool/convergence-check/): lee este mismo registro exportado a CSV y devuelve, escenario a escenario, si alcanza cobertura convergente efectiva.
 
-## Entrega revisada de septiembre
+## Entrega más reciente y antecedente de septiembre
 
-[Acceso a los 20 documentos revisados y sus editables](../../deliverables/fase1/revision_2026-09/README.md). Esta es la entrega que debe leerse para las correcciones de septiembre. Las versiones citadas en el relato de julio/agosto describen su estado histórico, no la aprobación de la revisión nueva.
+[Acceso a las 20 piezas y sus editables](../../deliverables/fase1/revision_2026-09-27/README.md), incluidas las diez revisadas el 27/09 y diez conservadas por referencia. La entrega anterior permanece disponible. Las versiones citadas en el relato de julio/agosto describen su estado histórico, no la aprobación de la revisión nueva.
 
 ## Documentos del sistema
 
@@ -73,7 +59,7 @@ Y si quieres ver la regla funcionando en lugar de leerla, el validador está en 
 | SGSI-REG-003 | Declaración de Aplicabilidad (Excel) | 93 controles del Anexo A: 83 aplicables justificados por riesgo o requisito concreto, 10 no aplicables justificados uno a uno. Columna de trazabilidad: ningún control aplicable queda huérfano, y trece salen marcados como deuda documental. La regla de coherencia con el registro lleva declaradas sus dos excepciones, en vez de enunciarse como absoluta y tener una. El control 5.34 (privacidad y protección de datos personales) traza a REG-008, DOC-011, DOC-012 y HD-08. Y donde el Anexo A no contiene control propio para lo que el registro trata —efectivo, seguridad en destino, posición de vehículos—, el mapeo se declara como adaptación en lugar de forzarse en silencio |
 | SGSI-REG-004 | Cuaderno único de indicios (Excel) | Registro para correlación semanal, con campo de descarte de falsos positivos. La reconstrucción retrospectiva ilustra una posibilidad condicionada a disponer de indicios suficientes; no prueba detección automática en una semana concreta. |
 | SGSI-REG-005 | Registro de requisitos legales (Excel) | RGPD/LOPDGDD, videovigilancia, seguridad privada, fiscal ES/IE, límites al pago en efectivo, coordinación de actividades empresariales y contractuales; incluye los marcos evaluados y descartados (NIS2, DORA) con justificación |
-| SGSI-REG-006 | No conformidades y deuda de diseño (Excel) | Registra NC-2026-001 vinculada a HD-08 por el contrato del MSP, sin inventar operación ni eficacia. Añade HD-09 (cobertura digital de RSC-019/020) y HD-10 (validaciones de privacidad). La implantación no exime de registrar incumplimientos documentales. |
+| SGSI-REG-006 | No conformidades y deuda de diseño (Excel) | Registra NC-2026-001 vinculada a HD-08 por el contrato del MSP, sin inventar operación ni eficacia. Reevalúa HD-09 (RSC-019 físico; RSC-020 con carencia digital), conserva HD-10 y añade HD-11 (justificaciones pendientes). La implantación no exime de registrar incumplimientos documentales. |
 | SGSI-REG-008 | Registro de Actividades de Tratamiento — RAT (Excel, RGPD art. 30) | Diez tratamientos de datos personales (T-01 a T-10): CCTV, contratas, visitas, cuaderno de indicios, gestión de personal doméstico, verificación de órdenes financieras y banca privada, viajes y agenda, documentación patrimonial/societaria/fiscal ES-IE, presencia pública del principal, y la administración de sistemas por el MSP. Cada uno con responsable, encargado, finalidad, base jurídica, colectivo, categorías de datos, plazo de conservación y medidas de seguridad del SGSI que lo protegen. Fuente única que DOC-011 y DOC-012 dan por conocida y no repiten |
 | SGSI-INF-001 | Informe ejecutivo para la propiedad | El sistema entero en lenguaje llano: lo único que la propiedad necesita leer. La pieza que un director de seguridad enseña de verdad |
 
@@ -83,11 +69,11 @@ Cuatro piezas del sistema que se entienden mejor dibujadas que en prosa, todas e
 
 - **[cadena_rsc001.md](cadena_rsc001.md)** — el riesgo estrella, dibujado. La cadena completa del RSC-001 (el cuasi-incidente fundacional), sus seis eslabones y cada control situado sobre el que rompe. Incluye una advertencia que conviene leer: **RSC-001 ya no es el único riesgo en lo más alto del registro.** Empatan con él, en el nivel máximo —Crítico (16)—, dos escenarios sin adversario en el origen.
 - **[mapa_interfaces.md](mapa_interfaces.md)** — las diez interfaces del alcance (SGSI-DOC-001 §7.4) alrededor de Atalaya, con el riesgo de borde de cada una. De un vistazo, dónde se juega la eficacia del sistema y cuál es la única interfaz que no admite tratamiento contractual.
-- **[regla_convergencia.md](regla_convergencia.md)** — la regla del corazón del caso (SGSI-DOC-004 §6), dibujada como el árbol de decisión que literalmente ejecuta `convergence-check`: nivel del escenario → cobertura física efectiva / digital efectiva → los cuatro diagnósticos posibles.
+- **[regla_convergencia.md](regla_convergencia.md)** — la regla del corazón del caso (SGSI-DOC-004 §6), dibujada como el árbol de decisión que literalmente ejecuta `convergence-check`: nivel del escenario → dominios justificados → alcance y cobertura efectiva → diagnóstico o evaluación pendiente.
 - **[flujo_verificacion_ordenes.md](flujo_verificacion_ordenes.md)** — el circuito antifraude de SGSI-DOC-007: las seis reglas de verificación de una orden financiera en secuencia, con el freno de emergencia como vía transversal y el circuito reforzado del principal como rama aparte.
 
 ## Lo que este repositorio no incluye (y por qué)
 
 Los registros operativos del día a día —actas de comité, informes de auditoría ejecutados, evidencias de formación— no se simulan. Redactar actas de reuniones que nunca ocurrieron no demuestra criterio; el diseño del sistema y su trazabilidad interna, sí.
 
-La distinción importa: el **diseño** del ciclo de operación (DOC-010) y sus **registros vacíos con su estructura** (REG-004, REG-006) están publicados, porque ahí se ve el criterio. Las **evidencias de ejecución** no, porque serían ficción sobre ficción. La revisión de septiembre registra el incumplimiento documental comprobado y conserva separados los ejemplos, los hallazgos y las evidencias operativas aún inexistentes.
+La distinción importa: el **diseño** del ciclo de operación (DOC-010) y sus **registros con estructura, ejemplos e incidencias documentales identificadas** (REG-004, REG-006) están publicados, porque ahí se ve el criterio. Las **evidencias de ejecución** no, porque serían ficción sobre ficción. La revisión de septiembre registra el incumplimiento documental comprobado y conserva separados los ejemplos, los hallazgos y las evidencias operativas aún inexistentes.

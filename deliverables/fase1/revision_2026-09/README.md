@@ -1,5 +1,7 @@
 # Revisión documental de septiembre de 2026
 
+> Entrega anterior conservada. La [revisión del 27/09/2026](../revision_2026-09-27/README.md) actualiza la regla y sus resultados. Esta página describe el antecedente y no la situación revisada. Nota de enlace añadida el 27/09/2026.
+
 Versión de entrega 1.1 · 20/09/2026 · Escenario ficticio.
 
 Los originales se revisan mediante cambios localizados. Cada archivo identifica su nueva versión y su aprobación pendiente. Los PDF de la carpeta superior son la entrega anterior y se conservan como antecedente; no se sobrescriben. La aprobación formal de la ficción, la firma del MSP y la eficacia de controles no se dan por realizadas.

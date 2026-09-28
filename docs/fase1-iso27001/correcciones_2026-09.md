@@ -1,5 +1,7 @@
 # Revisión documental de septiembre de 2026
 
+> Entrega anterior conservada. La [revisión del 27/09/2026](revision_2026-09-27.md) actualiza la regla y sus resultados. Esta página describe el antecedente y no la situación revisada. Nota de enlace añadida el 27/09/2026.
+
 Versión 1.0 · 21/09/2026 · Autor: autor del caso · Escenario ficticio · Aprobación documental pendiente.
 
 Se revisan 14 Word y 6 Excel originales y se exportan sus 20 PDF, disponibles en el [índice de entrega](../../deliverables/fase1/revision_2026-09/README.md). Cada documento tiene versión e historial propios. Se conservan los PDF anteriores. La fecha de corte sigue siendo 24/07/2026: esta publicación no acredita implantación, firma, aprobación del Comité ni eficacia.

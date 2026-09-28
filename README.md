@@ -1,16 +1,18 @@
 # Caso Atalaya — Seguridad convergente para un family office
 
-**Un caso práctico completo de seguridad convergente físico-digital sobre un escenario de gran patrimonio: SGSI ISO/IEC 27001, un validador que ejecuta la regla de convergencia sobre el registro de riesgos, una herramienta de IA para protección de la huella familiar, y gobernanza ISO/IEC 42001 de esa herramienta. Cuatro capas sobre el mismo escenario.**
+[![Pruebas y coherencia](https://github.com/tarquistwr-hash/caso-atalaya/actions/workflows/pruebas.yml/badge.svg)](https://github.com/tarquistwr-hash/caso-atalaya/actions/workflows/pruebas.yml)
 
-**EN — Abstract.** A convergent-security case study built on a fictional family office scenario: a full ISO/IEC 27001 ISMS (scenario-based risk methodology, 25-scenario risk register, 93-control SoA, and a convergence rule enforced as a verifiable requirement), a Python validator that executes that rule against the register, an AI agent for family digital-footprint monitoring (planned, not started), and ISO/IEC 42001 governance of that agent. Fictional in its data, real in its substance: every design decision is justified in context. Documentation in Spanish.
+**Un caso práctico de seguridad convergente sobre un escenario ficticio de gran patrimonio. Publicados: diseño del SGSI ISO/IEC 27001 y validador Python. Planificados y sin iniciar: herramienta de IA y su gobernanza ISO/IEC 42001. El sistema sigue en implantación.**
+
+**EN — Abstract.** A convergent-security case study built on a fictional family office scenario: a full ISO/IEC 27001 ISMS (scenario-based risk methodology, 25-scenario risk register, 93-control SoA, and an applicability-based coverage rule checked against declared evidence, dates and control scope), a Python validator that executes that rule against the register, an AI agent for family digital-footprint monitoring (planned, not started), and ISO/IEC 42001 governance of that agent. Fictional in its data, real in its substance: every design decision is justified in context. Documentation in Spanish.
 
 > ⚠️ **Escenario íntegramente ficticio.** Personas, sociedades, patrimonios y hechos son inventados y no guardan relación con ninguna persona u organización real. La verosimilitud procede de experiencia profesional real en protección ejecutiva y patrimonial; los datos, no.
 
 ## En cinco minutos
 
-- **Qué demuestra:** que un riesgo de gran patrimonio solo está tratado si tiene cobertura efectiva a la vez en el dominio físico y en el digital, y que esa regla se puede comprobar por máquina, no solo declarar.
-- **Qué leer primero:** el [informe ejecutivo para la propiedad](deliverables/fase1/revision_2026-09/SGSIINF001_Informe_Ejecutivo_Propiedad_v1_6.pdf) (visión de dirección) y [la regla de convergencia como árbol de decisión](docs/fase1-iso27001/regla_convergencia.md).
-- **Verlo funcionar:** [vídeo de la herramienta](https://youtu.be/0B5Mc03_dyg) y [`tool/convergence-check`](tool/convergence-check/README.md).
+- **Qué demuestra:** cómo analizar los dominios físico y digital de cada riesgo, justificar su aplicabilidad y comprobar la cobertura de los dominios exigibles. El resultado no equivale a aceptar el riesgo residual.
+- **Qué leer primero:** el [informe ejecutivo para la propiedad](deliverables/fase1/revision_2026-09-27/SGSIINF001_Informe_Ejecutivo_Propiedad_v1_7.pdf) (visión de dirección) y [la regla de convergencia como árbol de decisión](docs/fase1-iso27001/regla_convergencia.md).
+- **Verlo funcionar:** [vídeo de la herramienta](https://youtu.be/0B5Mc03_dyg) (versión anterior: la regla y los resultados han cambiado; consultar la demostración actual) y [`tool/convergence-check`](tool/convergence-check/README.md).
 - **Estado:** capas 1 y 2 publicadas; capas 3 y 4 no iniciadas. El SGSI está en implantación y no simula evidencias de ejecución.
 
 ---
@@ -31,8 +33,8 @@ Family office español (9 personas, Marbella) de un exboxeador irlandés con ~11
 
 | Capa | Contenido | Estado |
 |---|---|---|
-| **1 — SGSI ISO/IEC 27001** | Sistema completo del family office: contexto, política, metodología de riesgos por escenarios, registro de 25 escenarios con 64 controles trazados uno a uno, plan de tratamiento con aceptación del residual, SoA de 93 controles justificados, las políticas que tratan los riesgos dominantes, y el bloque RGPD (RAT, ponderación del interés legítimo, EIPD) sobre los tratamientos de datos personales que el sistema genera | ✅ Publicada |
-| **2 — `convergence-check`** | Validador en Python que ejecuta la regla de convergencia sobre el registro: filtra los escenarios Alto y Crítico y comprueba si cada uno alcanza cobertura efectiva en los dominios físico y digital. Es la verificación técnica que la propia metodología exige | ✅ Publicada |
+| **1 — SGSI ISO/IEC 27001** | Sistema completo del family office: contexto, política, metodología de riesgos por escenarios, registro de 25 escenarios con 64 controles trazados uno a uno, plan de tratamiento con aceptación del residual prevista y revalidación pendiente en los planes afectados, SoA de 93 controles justificados, las políticas que tratan los riesgos dominantes, y el bloque RGPD (RAT, ponderación del interés legítimo, EIPD) sobre los tratamientos de datos personales que el sistema genera | ✅ Publicada |
+| **2 — `convergence-check`** | Validador en Python que ejecuta la regla de convergencia sobre el registro: filtra los escenarios Alto y Crítico y comprueba si cada uno alcanza cobertura efectiva en sus dominios aplicables. Es la verificación técnica que la propia metodología exige | ✅ Publicada |
 | **3 — Herramienta de IA** | Monitorización de huella digital y exposición OSINT de la familia con alerta temprana, sobre el mismo escenario (trata los riesgos RSC-001, RSC-002 y RSC-015 del registro) | ⏳ No iniciada |
 | **4 — Gobernanza ISO/IEC 42001** | Gobierno de la futura herramienta de IA. Su clasificación jurídica y los requisitos aplicables se determinarán sobre el uso concreto; no se presume una clasificación legal por tratar datos de menores | ⏳ No iniciada |
 
@@ -67,32 +69,42 @@ Las capas 1 y 2 se construyen juntas y son inseparables por diseño: la regla de
 
 ## La regla, y la máquina que la comprueba
 
-La tesis del caso cabe en una frase: **un riesgo alto o crítico no está tratado si solo tiene cobertura en el dominio físico o solo en el digital.** Los controles organizativos son necesarios y no satisfacen ninguna de las dos patas.
+La tesis del caso cabe en una frase: **se analizan siempre los dominios físico y digital; se exige cobertura en los que intervienen en cada escenario Alto o Crítico.** La no aplicabilidad se justifica y lo pendiente no se da por cubierto. Los controles organizativos se conservan, sin equipararlos automáticamente a cobertura física o digital.
 
-Eso no es un párrafo de introducción: es un requisito de la metodología (SGSI-DOC-004 §6) con una definición operativa de cobertura efectiva —control implantado, con evidencia registrada y con verificación dentro de plazo— y con un programa que la ejecuta sobre el registro completo.
+Eso no es un párrafo de introducción: es un requisito de la metodología (SGSI-DOC-004 §6) con una definición operativa de cobertura efectiva —control implantado, con evidencia registrada, verificación dentro de plazo y alcance GENERAL justificado— y con un programa que la ejecuta sobre el registro completo.
 
 ```
 $ python project.py riesgos.csv controles_junio.csv 30/06/2027
 
-RSC-001 Cobertura convergente
-RSC-002 Cobertura convergente
-RSC-003 Cobertura convergente
+RSC-001 Cumple cobertura de los dominios aplicables
+RSC-002 Cumple cobertura de los dominios aplicables
+RSC-003 Cumple cobertura de los dominios aplicables
 RSC-004 Falta cobertura física
-RSC-005 Cobertura convergente
-...
-RSC-016 Sin cobertura
-RSC-018 Sin cobertura
-RSC-019 Falta cobertura digital
+RSC-005 Cumple cobertura de los dominios aplicables
+RSC-006 Falta cobertura digital
+RSC-007 Cumple cobertura de los dominios aplicables
+RSC-008 Cumple cobertura de los dominios aplicables
+RSC-009 Cumple cobertura de los dominios aplicables
+RSC-010 Falta cobertura digital
+RSC-011 Cumple cobertura de los dominios aplicables
+RSC-012 Cumple cobertura de los dominios aplicables
+RSC-013 Cumple cobertura de los dominios aplicables
+RSC-014 Evaluación pendiente de dominios
+RSC-015 Cumple cobertura de los dominios aplicables
+RSC-016 Falta cobertura digital
+RSC-018 Sin cobertura en los dominios aplicables
+RSC-019 Cumple cobertura de los dominios aplicables
 RSC-020 Falta cobertura digital
-...
-RSC-021 Falta cobertura digital
+RSC-021 Cumple cobertura de los dominios aplicables
 RSC-022 Falta cobertura física
-...
+RSC-023 Cumple cobertura de los dominios aplicables
+RSC-024 Cumple cobertura de los dominios aplicables
+RSC-025 Cumple cobertura de los dominios aplicables
 ```
 
-Veinticuatro escenarios evaluados: 17 con cobertura según la regla y 7 sin cobertura convergente efectiva. RSC-019 y RSC-020 no acreditan dominio digital porque C-039/C-044 son registros en papel, ahora clasificados ORGANIZATIVO. El más interesante es **RSC-018**: sus cuatro controles figuran implantados y todos dejan evidencia registrada. Aun así sale sin cobertura, porque las verificaciones de sus controles físicos y digital han vencido, y el único que sigue en plazo es organizativo — y el dominio organizativo no satisface ninguna de las dos patas de la regla. Un control que nadie comprueba deja de acreditar nada, y esa distinción —incumplimiento de verificación, no de operación— es precisamente lo que un registro mantenido a mano nunca detecta.
+En la demostración a 30/06/2027: **16 escenarios cumplen la cobertura de sus dominios aplicables, 7 presentan carencias y 1 tiene evaluación de dominios pendiente (RSC-014)**. No se acredita aceptación del residual. RSC-018 conserva verificaciones vencidas; RSC-016 tiene C-020 organizativo, pero ninguna medida digital computable. [Salida completa](tool/convergence-check/ejemplo_demo.txt).
 
-Ese resultado no es casual: `controles_junio.csv` no es una proyección optimista del plan de tratamiento, sino un estado simulado a fecha futura construido con defectos deliberados —verificaciones caducadas y dos controles que siguen sin implantar— para que el validador tenga los cuatro diagnósticos que tratar. El estado real del sistema a fecha de corte es `controles.csv`, y ahí ningún escenario alcanza cobertura.
+Ese resultado no es casual: `controles_junio.csv` no es una proyección optimista del plan de tratamiento, sino un estado simulado a fecha futura construido con defectos deliberados —verificaciones caducadas y dos controles que siguen sin implantar— para comprobar los diagnósticos de cobertura, sus carencias y las evaluaciones pendientes. El estado real del sistema a fecha de corte es `controles.csv`, y ahí ningún escenario evaluable acredita cobertura; RSC-014 conserva además la evaluación pendiente.
 
 Detalle de uso, esquema de los CSV y suite de pruebas: [`tool/convergence-check/README.md`](tool/convergence-check/README.md)
 
@@ -103,7 +115,7 @@ Detalle de uso, esquema de los CSV y suite de pruebas: [`tool/convergence-check/
 | SGSI-DOC-001 | Contexto y Alcance | La residencia entra en alcance; las sociedades irlandesas salen como organizaciones pero su flujo de información queda como interfaz; la familia no es "usuario interno" y se gestiona por acuerdo |
 | SGSI-DOC-002 | Control documental | 4 niveles de clasificación; "rutinas de la familia = Restringida, siempre"; plazos de retención de todos los registros, incluidos los que contienen datos personales |
 | SGSI-DOC-003 | Política de Seguridad | Política en dos niveles: declaración de una página en lenguaje llano firmada por el principal + desarrollo aprobado por delegación. Comité de Seguridad Convergente con el jefe de seguridad física dentro. Distingue el Responsable del SGSI (ISO 27001) del Responsable del Tratamiento (RGPD): son el mismo órgano de gobierno, con responsabilidades distintas |
-| SGSI-DOC-004 | Metodología de riesgos | Basada en escenarios (ISO 27005, enfoque por eventos), no por activos: los riesgos que importan aquí son cadenas que cruzan dominios. Regla del máximo en impacto. Probabilidad por acumulación de condiciones de exposición, con el nivel máximo condicionado a señal observada. Alto/crítico exigen cobertura efectiva en ambos dominios: implantada, con evidencia y verificada en plazo |
+| SGSI-DOC-004 | Metodología de riesgos | Basada en escenarios (ISO 27005, enfoque por eventos), no por activos: los riesgos que importan aquí son cadenas que cruzan dominios. Regla del máximo en impacto. Probabilidad por acumulación de condiciones de exposición, con el nivel máximo condicionado a señal observada. Alto/crítico exigen cobertura efectiva en los dominios justificados: implantada, con evidencia, verificada en plazo y con alcance suficiente |
 | SGSI-DOC-005 | Objetivos 2026-27 | 12 objetivos medibles. Los 7 primeros miden implantación; los 5 últimos, ejecución sostenida. Dos indicadores miden fricción y no llevan meta de reducción |
 | SGSI-DOC-006 | Terceros y círculo de confianza | El nivel de exigencia lo fija el acceso real, no el vínculo. Regularización del círculo histórico sin romperlo. Y una sección donde la política declara su propio límite: los invitados de la familia no son terceros contractuales, y por ahí entró el incidente |
 | SGSI-DOC-007 | Verificación de órdenes financieras | Doble canal siempre; la voz no verifica (voz sintética); cuatro ojos; el freno de emergencia no penaliza. Y cinco reglas para el dinero que se mueve en efectivo, que no viajaba por ningún canal verificable |
@@ -115,18 +127,18 @@ Detalle de uso, esquema de los CSV y suite de pruebas: [`tool/convergence-check/
 
 | Código | Registro | Contenido |
 |---|---|---|
-| SGSI-REG-001/002 | Registro de riesgos + plan de tratamiento (un libro, cinco hojas) | 25 escenarios narrados como cadenas, valorados y tratados eslabón a eslabón, cada uno situado en las interfaces del alcance con vocabulario cerrado. 64 controles, uno por fila, cada uno con dominio, estado, evidencia y periodicidad de verificación: así la regla de convergencia se puede ejecutar por máquina. 16 planes con riesgo residual y su acto de aceptación |
+| SGSI-REG-001/002 | Registro de riesgos + plan de tratamiento (un libro, cinco hojas) | 25 escenarios narrados como cadenas, valorados y tratados eslabón a eslabón, cada uno situado en las interfaces del alcance con vocabulario cerrado. 64 controles, uno por fila, cada uno con dominio, estado, evidencia y periodicidad de verificación: así la regla de convergencia se puede ejecutar por máquina. 16 planes con residual previsto; revalidación y aceptación pendientes en los afectados por la revisión |
 | SGSI-REG-003 | Declaración de Aplicabilidad | 93 controles: 83 aplicables y 10 excluidos en el corte; 13 con deuda documental. Las exclusiones requieren revisión individual al cambiar el alcance. C-039/C-044 dejan de justificar A.8.15 y se conserva su trazabilidad documental en A.5.33. |
 | SGSI-REG-004 | Cuaderno único de indicios | Estructura de registro y revisión de correlaciones, con descarte razonado. La reconstrucción es condicional y no garantiza detección en semana 4; la evaluación y la severidad S2 se distinguen. |
 | SGSI-REG-005 | Registro de requisitos legales | RGPD/LOPDGDD, videovigilancia, seguridad privada, fiscal ES/IE, límites al pago en efectivo, coordinación de actividades empresariales, contractuales; NIS2 y DORA evaluados y descartados por escrito |
-| SGSI-REG-006 | No conformidades y deuda de diseño | Diez hallazgos de diseño, tres cierres históricos y siete abiertos. NC-2026-001 registra la carencia contractual ya descrita por HD-08. HD-09 recoge la cobertura digital pendiente; HD-10, la justificación de privacidad pendiente. Sin eficacia operativa ficticia. |
+| SGSI-REG-006 | No conformidades y deuda de diseño | Once hallazgos de diseño, tres cierres históricos y ocho abiertos. NC-2026-001 registra la carencia contractual ya descrita por HD-08. HD-09 conserva la carencia digital de RSC-020 tras revisar RSC-019; HD-10 recoge privacidad; HD-11, justificaciones de dominios y controles pendientes. Sin eficacia operativa ficticia. |
 | SGSI-REG-008 | Registro de Actividades de Tratamiento (RAT, RGPD art. 30) | Diez tratamientos de datos personales (T-01 a T-10) que el SGSI genera —CCTV, contratas, visitas, cuaderno de indicios, gestión de personal doméstico, verificación de órdenes financieras y banca privada, viajes y agenda, documentación patrimonial/societaria/fiscal ES-IE, presencia pública del principal, y la administración de sistemas por el MSP (correo, NAS, CCTV, domótica)—, cada uno con responsable, encargado, finalidad, base jurídica, colectivo, categorías de datos, plazo de conservación y medidas de seguridad del SGSI que lo protegen. Es la fuente única que SGSI-DOC-011 y SGSI-DOC-012 dan por conocida y no repiten |
 | SGSI-INF-001 | Informe ejecutivo para la propiedad | Informe con corte histórico de julio y revisión documental identificada; no acredita comunicaciones ni implantación no verificadas. |
 
 ## Decisiones de diseño (lo que distingue esto de una plantilla)
 
 1. **El alcance persigue a la información, no al organigrama.** La residencia está dentro; la conducta de la familia se gestiona por acuerdo, no por imposición.
-2. **El riesgo se piensa como cadena.** Un escenario convergente tratado solo con controles digitales, o solo físicos, se considera no tratado. Está escrito como regla en la metodología, y al ejecutarla sobre el registro completo produjo nueve incumplimientos: siete se corrigieron añadiendo los controles que faltaban en el dominio descubierto —nueve en total, siete físicos y dos digitales—, y dos siguen abiertos con plazo y responsable porque su tratamiento hay que rediseñarlo, no completarlo (RSC-004 y RSC-016, hallazgo HD-02).
+2. **El riesgo se piensa como cadena.** Cada dominio debe justificarse por la cadena. Se retira C-060 y se reclasifican C-061/C-062/C-064; los controles condicionados no acreditan cobertura general. Se revisan HD-02 y HD-09, y HD-11 recoge las justificaciones todavía pendientes.
 3. **La regla se ejecuta, no se declara.** Si un requisito solo se comprueba a mano, deja de comprobarse en cuanto el registro crece. Por eso la regla de convergencia tiene un validador propio, y por eso el registro está diseñado con una fila por control en lugar de una lista dentro de una celda.
 4. **Un control que no se ejecuta no es un control.** La cobertura solo cuenta si está implantada, deja evidencia registrada y su verificación sigue en plazo. Por eso el propio sistema declara que a fecha de corte, sin ningún control del registro implantado, ningún escenario alcanza aún cobertura efectiva.
 5. **El riesgo de todos los días entra en el catálogo.** El registro de la v1.0 estaba construido desde el adversario y daba por buenos la alarma, el vigilante y el conductor porque están contratados. La revisión de campo dio entrada a ocho escenarios de fallo de ejecución y operativa material (RSC-018 a RSC-025), y con ellos el vuelco del caso: de los tres escenarios que alcanzan el nivel máximo del registro, dos no tienen adversario en el origen. Uno de ellos es, sencillamente, que la alarma no se conecta al cerrar.
@@ -139,9 +151,13 @@ El porqué de cada una, desarrollado: [`docs/fase1-iso27001/decisiones.md`](docs
 
 **Estado y fecha de corte.** El caso publica el SGSI **en implantación**, con fecha de corte 24/07/2026. Los plazos de los planes de tratamiento y de la deuda de diseño se cuentan desde ahí. Ningún control del registro de riesgos está en estado implantado, y el sistema lo dice en lugar de disimularlo.
 
-**Qué queda fuera y por qué:** las evidencias de ejecución —actas de comité, informes de auditoría realizados, registros de formación— no se simulan. El **diseño** del ciclo de operación sí está publicado (DOC-010) y sus registros también, con su estructura y vacíos (REG-004, REG-006), porque ahí es donde se ve el criterio. Redactar actas de reuniones que nunca ocurrieron sería ficción sobre ficción. La revisión documental registra las carencias descritas por el propio caso; no inventa una auditoría ni evidencia de ejecución.
+**Qué queda fuera y por qué:** no se atribuye ejecución real a actas de comité, auditorías o formación. El diseño del ciclo de operación está publicado (DOC-010), junto con registros y ejemplos ficticios identificados. Las referencias históricas a actas y aceptaciones son decisiones narrativas del escenario, no evidencias de reuniones celebradas ni de eficacia. La revisión mantiene abiertas las carencias que todavía requieren decisión, implantación o verificación.
 
-## Revisión documental de septiembre de 2026
+## Revisión documental vigente en el repositorio
+
+[Entrega del 27/09/2026](deliverables/fase1/revision_2026-09-27/README.md) · [Deltas y verificaciones](docs/fase1-iso27001/revision_2026-09-27.md). Estado Borrador. La revisión del programa no cierra los pendientes operativos.
+
+## Antecedente de septiembre de 2026
 
 Se corrigen el validador, la clasificación de controles, las reglas contradictorias y la presentación de privacidad. La revisión conserva abiertas las acciones de diseño y verificación que el caso no ha ejecutado. Cambios y límites: [registro de correcciones](docs/fase1-iso27001/correcciones_2026-09.md).
 
@@ -158,4 +174,4 @@ Dos licencias, porque hay dos tipos de contenido:
 
 ---
 
-*Capas 1 y 2 cerradas. La capa 3 (herramienta de IA) se construye durante el capstone del bootcamp de AI Engineering, sobre este mismo escenario y contra los riesgos RSC-001, RSC-002 y RSC-015 de este registro.*
+*Capas 1 y 2 publicadas y sujetas a revisión. Capas 3 y 4 planificadas y sin iniciar. La futura herramienta de IA se plantea como proyecto final del bootcamp, sobre los riesgos RSC-001, RSC-002 y RSC-015.*

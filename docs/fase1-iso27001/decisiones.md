@@ -1,5 +1,7 @@
 # Decisiones de diseño — Fase 1 (ISO/IEC 27001)
 
+> Las secciones 1–24 conservan decisiones históricas. Para la regla actual prevalecen la sección 25, DOC-004 v2.0 y la [revisión del 27/09/2026](revision_2026-09-27.md).
+
 Este documento recoge las decisiones que definen el SGSI del caso y el razonamiento detrás de cada una. Es la pieza que distingue este trabajo de una plantilla rellenada: cualquiera puede descargar un kit de documentos 27001; lo que no viene en el kit es por qué cada cosa es como es **en este contexto**.
 
 ---
@@ -234,3 +236,13 @@ La conclusión de diseño: este caso no inventa amenazas exóticas para lucirse.
 Se conserva el soporte en papel de C-039/C-044 y se retira su dominio DIGITAL, sin inventar sistemas. La simulación pasa de 19 a 17 escenarios con cobertura. La confirmación presencial se exige desde 50.000 euros, también para el principal. ACU-004 identifica el anexo MSP; ACU-003 permanece reservado a confidencialidad de la representante. Las conclusiones de privacidad se limitan a lo demostrado y se conserva el seguimiento de medidas y residual pendientes. La fase de implantación no excluye por sí sola incumplimientos ya exigibles.
 
 [Tabla de cambios, comprobaciones y acciones abiertas](correcciones_2026-09.md). Las secciones anteriores conservan el razonamiento histórico; no acreditan cierre de los hallazgos posteriores.
+
+## 25. Analizar ambos dominios y exigir solo los aplicables
+
+**Decisión del 27/09/2026:** la exigencia universal de físico y digital no reflejaba el criterio del autor. Se analizan ambos en los 25 escenarios y se justifica su aplicabilidad. La columna de dominios ya existía en el CSV, pero el programa no la leía. La versión 2.0 la utiliza y separa evaluación pendiente de no aplicabilidad.
+
+El dominio del escenario se determina por su cadena; el dominio de una medida por cómo actúa; el bloque del Anexo A no sustituye ninguno de esos análisis. Una medida complementaria no introduce un eslabón nuevo. C-060 se retira; C-061/C-062/C-064 son organizativos. C-059/C-065 tienen umbral de 50.000 euros, C-058/C-063 límites de uso material, y C-016/C-019 conservan su cobertura digital pendiente de acreditar. C-065 es una fila de trazabilidad de una regla ya existente en DOC-007, no una nueva obligación ni un sistema añadido.
+
+HD-02 y HD-09 se reevalúan sin cierre automático. HD-11 sustituye la propuesta externa de exigir físico a RSC-007/RSC-024 y registra los pendientes de justificación. Las puntuaciones residuales se conservan como previsiones que necesitan revalidación en los planes afectados; no se declara eficacia.
+
+La prueba automática compara resultados por escenario y Excel–CSV–SoA, con las excepciones documentadas. Que pase una prueba significa coherencia de datos y lógica, no seguridad implantada ni aceptación del riesgo. Los límites y las 25 justificaciones están en la revisión enlazada arriba.

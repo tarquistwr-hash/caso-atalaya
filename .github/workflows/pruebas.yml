@@ -1,0 +1,20 @@
+name: Pruebas y coherencia del corpus
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tool/convergence-check
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: python check_corpus.py
+      - run: python project.py riesgos.csv controles.csv 24/07/2026 --json
+      - run: python project.py riesgos.csv controles_junio.csv 30/06/2027 --json
