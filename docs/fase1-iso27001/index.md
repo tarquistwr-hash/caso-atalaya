@@ -1,4 +1,6 @@
-## Estado vigente del repositorio — 27/09/2026
+## Estado vigente del repositorio — 12/10/2026
+
+**Actualización editorial:** ESC-001 v2.2 alinea la descripción de la futura IA con el README, sin clasificación jurídica anticipada. Revisión pendiente de aprobación dentro del caso; no cambia el corte operativo ni el estado de implantación. [Delta y revisión en cascada](revision_2026-10-12.md). La referencia a ESC-001 v2.1 del relato inferior se conserva como antecedente histórico.
 
 [Entrega más reciente](../../deliverables/fase1/revision_2026-09-27/README.md) · [Deltas y verificaciones](revision_2026-09-27.md). Documentación en **Borrador**, pendiente de aprobación dentro del caso. Corte operativo **24/07/2026**, sin evidencias nuevas de implantación. Ningún control del registro está IMPLEMENTADO; la excepción A.8.14 se mantiene separada en la SoA.
 

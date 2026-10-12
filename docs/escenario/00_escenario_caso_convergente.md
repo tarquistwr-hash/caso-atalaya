@@ -3,20 +3,21 @@
 | Campo | Valor |
 |---|---|
 | Código | ESC-001 |
-| Versión | 2.1 |
-| Estado | Vigente |
+| Versión | 2.2 |
+| Estado | Revisión documental — pendiente de aprobación dentro del caso |
 | Clasificación | Pública — aprobada expresamente para difusión exterior por ser escenario ficticio |
 | Propietario | Comité de Seguridad Convergente |
 | Autor | Alejandro Tarquis Melgares |
 | Fecha de emisión | 03/04/2026 |
-| Fecha de aprobación | 24/07/2026 |
-| Aprobado por | Comité de Seguridad Convergente |
-| Registro de aprobación | Aprobación dentro de la ficción del caso; no se redacta ni publica acta |
+| Fecha de aprobación | Pendiente para v2.2; antecedente v2.1: 24/07/2026 |
+| Aprobado por | Pendiente para esta revisión |
+| Registro de aprobación | La aprobación histórica corresponde a v2.1 dentro de la ficción; esta revisión no acredita nueva aprobación ni implantación |
 
 **Historial de versiones**
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 2.2 | 12/10/2026 | Corrección editorial de §11: se retira la clasificación anticipada de la futura IA y se alinea con el README publicado. Clasificación jurídica y requisitos pendientes del uso concreto; capas 3 y 4 sin iniciar. Sin cambios en riesgos, controles, RAT ni corte operativo. [Delta y revisión en cascada](../fase1-iso27001/revision_2026-10-12.md). |
 | 0.1 | 03/04/2026 | Borrador inicial (principal estadounidense) |
 | 0.2 | 07/04/2026 | Principal irlandés con pasado penal juvenil; hijo mayor influencer; estructura patrimonial Irlanda↔España |
 | 0.3 | 09/04/2026 | Corrección de cronología familiar |
@@ -183,7 +184,7 @@ Esa figura es a la vez parte de la solución y un riesgo en sí misma, y el sist
 
 - **ISO 27001 (Fase 1):** implantación del SGSI en Atalaya GP SL por el consultor externo. Alcance: el family office y sus interfaces con la familia, el círculo histórico, las residencias y los terceros.
 - **Herramienta de IA (Fase 2, capstone):** el detonante la justifica sola — monitorización de huella digital y exposición OSINT de la familia con alerta temprana. Se define en su momento; el escenario ya le deja el hueco.
-- **ISO 42001 (Fase 3):** gobernanza de esa herramienta: tratará datos de menores, geolocalización y perfiles de riesgo de personas. Caso de uso de alto riesgo servido.
+- **ISO/IEC 42001:2023 (Fase 3; capa 4 del README):** gobierno de la futura herramienta de IA, todavía sin iniciar. Su clasificación jurídica y los requisitos aplicables se determinarán sobre el uso concreto; no se presume una clasificación legal por tratar datos de menores. El diseño deberá concretar los datos y las finalidades antes de evaluar sus obligaciones, en coherencia con el README.
 
 ## 12. Decisiones de desidentificación
 
