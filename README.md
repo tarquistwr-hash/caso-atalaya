@@ -1,5 +1,7 @@
 # Caso Atalaya — Seguridad convergente para un family office
 
+![Caso Atalaya: seguridad convergente. Ilustración conceptual de una residencia ficticia.](assets/readme/atalaya-portada.png)
+
 [![Pruebas y coherencia](https://github.com/tarquistwr-hash/caso-atalaya/actions/workflows/pruebas.yml/badge.svg)](https://github.com/tarquistwr-hash/caso-atalaya/actions/workflows/pruebas.yml)
 
 **Un caso práctico de seguridad convergente sobre un escenario ficticio de gran patrimonio. Publicados: diseño del SGSI ISO/IEC 27001 y validador Python. Planificados y sin iniciar: herramienta de IA y su gobernanza ISO/IEC 42001. El sistema sigue en implantación.**
@@ -25,11 +27,20 @@ El incidente que articula el escenario: un antiguo promotor deportivo con una cu
 
 Eso último es lo importante: la detección funcionó **por azar**. Dependía de que esa persona estuviera de servicio, se acordara del vehículo y atara los dos cabos. Ningún control puramente físico ni puramente digital habría cortado la cadena, y el que la cortó no era repetible ni auditable. Ese es el problema que el caso resuelve.
 
+![RSC-001: encargo, delegación, aproximación, extracción, confirmación y ejecución prevista. La detección del relato fue fortuita; no se acredita eficacia operativa.](assets/readme/atalaya-cadena-rsc001.svg)
+
+[Ver la cadena completa y el tratamiento diseñado](docs/fase1-iso27001/cadena_rsc001.md).
+
 ## El escenario en una línea
 
 Family office español (9 personas, Marbella) de un exboxeador irlandés con ~110 M€, familia con tres hijos —uno de ellos influencer adolescente—, patrimonio en dos jurisdicciones, un círculo de confianza histórico sin marco formal y un MSP que administra desde el correo hasta las cámaras. Ficha completa: [`docs/escenario/00_escenario_caso_convergente.md`](docs/escenario/00_escenario_caso_convergente.md)
 
 ## Las cuatro capas
+
+![Las cuatro capas: SGSI y validador Python publicados; herramienta de IA y gobernanza ISO/IEC 42001 sin iniciar. El SGSI sigue en implantación.](assets/readme/atalaya-cuatro-capas.svg)
+
+<details>
+<summary>Ver contenido y alcance de cada capa</summary>
 
 | Capa | Contenido | Estado |
 |---|---|---|
@@ -37,6 +48,8 @@ Family office español (9 personas, Marbella) de un exboxeador irlandés con ~11
 | **2 — `convergence-check`** | Validador en Python que ejecuta la regla de convergencia sobre el registro: filtra los escenarios Alto y Crítico y comprueba si cada uno alcanza cobertura efectiva en sus dominios aplicables. Es la verificación técnica que la propia metodología exige | ✅ Publicada |
 | **3 — Herramienta de IA** | Monitorización de huella digital y exposición OSINT de la familia con alerta temprana, sobre el mismo escenario (trata los riesgos RSC-001, RSC-002 y RSC-015 del registro) | ⏳ No iniciada |
 | **4 — Gobernanza ISO/IEC 42001** | Gobierno de la futura herramienta de IA. Su clasificación jurídica y los requisitos aplicables se determinarán sobre el uso concreto; no se presume una clasificación legal por tratar datos de menores | ⏳ No iniciada |
+
+</details>
 
 Las capas 1 y 2 se construyen juntas y son inseparables por diseño: la regla de convergencia se escribe como norma en la metodología y se ejecuta como código sobre el registro. Las capas 3 y 4 llegan con el capstone del bootcamp de AI Engineering y después.
 
@@ -46,6 +59,7 @@ Las capas 1 y 2 se construyen juntas y son inseparables por diseño: la regla de
 .
 ├── README.md                             ← esto
 ├── LICENSE                               ← MIT para el código; la documentación, CC BY-NC 4.0
+├── assets/readme/                        ← portada y diagramas del README, con fuentes e historial
 ├── docs/
 │   ├── escenario/
 │   │   └── 00_escenario_caso_convergente.md
@@ -154,6 +168,8 @@ El porqué de cada una, desarrollado: [`docs/fase1-iso27001/decisiones.md`](docs
 **Qué queda fuera y por qué:** no se atribuye ejecución real a actas de comité, auditorías o formación. El diseño del ciclo de operación está publicado (DOC-010), junto con registros y ejemplos ficticios identificados. Las referencias históricas a actas y aceptaciones son decisiones narrativas del escenario, no evidencias de reuniones celebradas ni de eficacia. La revisión mantiene abiertas las carencias que todavía requieren decisión, implantación o verificación.
 
 ## Revisión documental vigente en el repositorio
+
+**Revisión editorial del README v1.1 · 12/11/2026:** portada y diagramas alineados con el estado vigente; aclaración del resumen RSC-001. [Deltas y comprobaciones](docs/fase1-iso27001/revision_2026-11-12.md). No cambia la fecha de corte ni acredita implantación.
 
 [Entrega del 27/09/2026](deliverables/fase1/revision_2026-09-27/README.md) · [Deltas y verificaciones](docs/fase1-iso27001/revision_2026-09-27.md). Estado Borrador. La revisión del programa no cierra los pendientes operativos.
 

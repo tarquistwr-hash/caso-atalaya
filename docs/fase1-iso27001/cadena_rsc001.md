@@ -1,8 +1,10 @@
 # RSC-001 — La cadena, eslabón a eslabón
 
+**Revisión editorial v1.1 · 12/11/2026 · Borrador.** Corte operativo: 24/07/2026. Se distingue tratamiento diseñado, relato histórico y eficacia no acreditada. [Historial y deltas](revision_2026-11-12.md).
+
 El riesgo que originó el SGSI, dibujado como lo trata la metodología (SGSI-DOC-004): una cadena de seis eslabones que cruza los dominios digital, organizativo y físico, con cada control del plan de tratamiento situado sobre el eslabón que rompe.
 
-La regla de convergencia exige, para un escenario Crítico, cobertura efectiva en los dominios físico y digital. El tratamiento diseñado sitúa controles en los eslabones 3, 4 y 5, y en ambos dominios. Que aún no alcance cobertura *efectiva* —ningún control está implantado a fecha de corte— es otra cosa, y se lee en la hoja «Controles» del registro.
+La regla de convergencia exige cobertura efectiva en los dominios cuya aplicabilidad está justificada para los escenarios Altos y Críticos. En RSC-001 están justificados ambos: mensajería y extracción de rutinas; encuentros, vigilancia del perímetro y aproximación coactiva. El tratamiento diseñado sitúa controles en los eslabones 3, 4 y 5. Ningún control del registro está implantado a fecha de corte: el diagrama representa funciones previstas, no cobertura efectiva acreditada.
 
 ```mermaid
 flowchart TB
@@ -55,9 +57,9 @@ flowchart TB
 
 **El tratamiento empuja la detección hacia la izquierda.** La privacidad de las cuentas y el acuerdo de exposición encarecen la aproximación; el canal sin reproche y el aviso previo de invitados la interrumpen; la zona social limita lo que se puede observar dentro; y el cuaderno permite cruzar indicios si se registran con suficiente calidad y se revisan; la reconstrucción es condicional y no garantiza detectar el patrón en una semana concreta (reconstrucción documentada en SGSI-REG-004, hoja «Reconstrucción 2026»).
 
-Esas seis semanas de diferencia son el intervalo durante el cual el intermediario mantuvo contacto directo con un menor. Ese intervalo, y no el resultado final, es lo que el sistema reduce.
+Las seis semanas de contacto pertenecen al relato del escenario; no representan una reducción de tiempo demostrada. El tratamiento pretende anticipar la detección, pero no se acredita una mejora temporal ni eficacia operativa.
 
-**Riesgo residual: Alto (8), aceptado por el jefe de seguridad como propietario del riesgo y ratificado por el Comité.** La cadena no se puede eliminar —la exposición pública del hijo es parte de su vida y de su trabajo— pero sí encarecer cada eslabón y acortar el tiempo de detección. Esa es la diferencia entre gestionar un riesgo y fingir que desaparece.
+**Riesgo residual previsto: Alto (8).** La aceptación por el jefe de seguridad y la ratificación por el Comité se conservan como decisiones narrativas históricas del caso, no como evidencia de reuniones celebradas, eficacia operativa o reducción alcanzada. Esta revisión editorial no revalora el residual ni altera el estado de aceptación de PT-01 en el registro. El tratamiento pretende dificultar la cadena y anticipar la detección; su resultado debe verificarse tras la implantación.
 
 ---
 
