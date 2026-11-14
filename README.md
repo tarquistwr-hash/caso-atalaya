@@ -13,9 +13,9 @@
 ## En cinco minutos
 
 - **Qué demuestra:** cómo analizar los dominios físico y digital de cada riesgo, justificar su aplicabilidad y comprobar la cobertura de los dominios exigibles. El resultado no equivale a aceptar el riesgo residual.
-- **Qué leer primero:** el [informe ejecutivo para la propiedad](deliverables/fase1/revision_2026-09-27/SGSIINF001_Informe_Ejecutivo_Propiedad_v1_7.pdf) (visión de dirección) y [la regla de convergencia como árbol de decisión](docs/fase1-iso27001/regla_convergencia.md).
+- **Qué leer primero:** el [informe ejecutivo para la propiedad](deliverables/fase1/vigente/SGSIINF001_Informe_Ejecutivo_Propiedad_v2_0.pdf) (visión de dirección) y [la regla de convergencia como árbol de decisión](docs/fase1-iso27001/regla_convergencia.md).
 - **Verlo funcionar:** [vídeo de la herramienta](https://youtu.be/0B5Mc03_dyg) (versión anterior: la regla y los resultados han cambiado; consultar la demostración actual) y [`tool/convergence-check`](tool/convergence-check/README.md).
-- **Estado:** capas 1 y 2 publicadas; capas 3 y 4 no iniciadas. El SGSI está en implantación y no simula evidencias de ejecución.
+- **Estado:** capas 1 y 2 publicadas; capas 3 y 4 no iniciadas. Fase 1 cerrada en la [línea base 2.0 de 13/11/2026](docs/fase1-iso27001/linea_base_2026-11-13.md): diecinueve documentos vigentes y uno pendiente de firma. El SGSI está en implantación, con cuatro no conformidades abiertas, y no simula evidencias de ejecución.
 
 ---
 
@@ -44,7 +44,7 @@ Family office español (9 personas, Marbella) de un exboxeador irlandés con ~11
 
 | Capa | Contenido | Estado |
 |---|---|---|
-| **1 — SGSI ISO/IEC 27001** | Sistema completo del family office: contexto, política, metodología de riesgos por escenarios, registro de 25 escenarios con 64 controles trazados uno a uno, plan de tratamiento con aceptación del residual prevista y revalidación pendiente en los planes afectados, SoA de 93 controles justificados, las políticas que tratan los riesgos dominantes, y el bloque RGPD (RAT, ponderación del interés legítimo, EIPD) sobre los tratamientos de datos personales que el sistema genera | ✅ Publicada |
+| **1 — SGSI ISO/IEC 27001** | Sistema completo del family office: contexto, política, metodología de riesgos por escenarios, registro de 25 escenarios con 64 controles trazados uno a uno, plan de tratamiento con el residual aceptado por el propietario de cada riesgo, SoA de 93 controles justificados, las políticas que tratan los riesgos dominantes, y el bloque RGPD (RAT, ponderación del interés legítimo, EIPD) sobre los tratamientos de datos personales que el sistema genera | ✅ Publicada |
 | **2 — `convergence-check`** | Validador en Python que ejecuta la regla de convergencia sobre el registro: filtra los escenarios Alto y Crítico y comprueba si cada uno alcanza cobertura efectiva en sus dominios aplicables. Es la verificación técnica que la propia metodología exige | ✅ Publicada |
 | **3 — Herramienta de IA** | Monitorización de huella digital y exposición OSINT de la familia con alerta temprana, sobre el mismo escenario (trata los riesgos RSC-001, RSC-002 y RSC-015 del registro) | ⏳ No iniciada |
 | **4 — Gobernanza ISO/IEC 42001** | Gobierno de la futura herramienta de IA. Su clasificación jurídica y los requisitos aplicables se determinarán sobre el uso concreto; no se presume una clasificación legal por tratar datos de menores | ⏳ No iniciada |
@@ -66,14 +66,20 @@ Las capas 1 y 2 se construyen juntas y son inseparables por diseño: la regla de
 │   └── fase1-iso27001/
 │       ├── index.md                      ← índice comentado de la documentación
 │       ├── decisiones.md                 ← las decisiones de diseño y su porqué
+│       ├── linea_base_2026-11-13.md      ← qué se aprobó al cerrar la Fase 1 y qué cambió
 │       ├── cadena_rsc001.md              ← el riesgo estrella, dibujado
 │       ├── mapa_interfaces.md            ← las diez interfaces del alcance, dibujadas
 │       ├── regla_convergencia.md         ← la regla de convergencia como árbol de decisión
-│       └── flujo_verificacion_ordenes.md ← el circuito antifraude de DOC-007
-├── deliverables/fase1/                   ← README con qué versión leer; PDF de julio y revisión de septiembre (Word/Excel y PDF)
+│       ├── flujo_verificacion_ordenes.md ← el circuito antifraude de DOC-007
+│       └── historial/                    ← notas de las revisiones anteriores a la línea base
+├── deliverables/fase1/
+│   ├── README.md                         ← tabla de los veinte documentos vigentes
+│   ├── vigente/                          ← línea base 2.0: Word/Excel editables y su PDF
+│   └── historico/                        ← entregas anteriores, obsoletas
 └── tool/convergence-check/               ← capa 2: el validador
     ├── project.py
     ├── test_project.py
+    ├── check_corpus.py                   ← coherencia entre los Excel, los CSV y la SoA
     ├── README.md                         ← uso, esquema de los CSV y limitaciones conocidas
     ├── requirements.txt
     ├── riesgos.csv                       ← registro real a fecha de corte
@@ -137,45 +143,43 @@ Detalle de uso, esquema de los CSV y suite de pruebas: [`tool/convergence-check/
 | SGSI-DOC-009 | Incidentes convergentes | Canal único, cuaderno común de indicios físicos y digitales, revisión semanal de correlación con umbral deliberadamente bajo |
 | SGSI-DOC-010 | Auditoría, revisión por la dirección y mejora | Diseñados sin simular ejecuciones: programa de auditoría externalizada (con 9 personas no hay independencia interna posible), revisión anual con la propiedad, y no conformidades con verificación de eficacia |
 | SGSI-DOC-011 | Necesidad, proporcionalidad y ponderación | Distingue el marco de videovigilancia de las finalidades basadas en interés legítimo. No sustituye una habilitación legal para datos penales ni una evaluación residual. |
-| SGSI-DOC-012 | Evaluación de impacto en protección de datos | Identifica tres riesgos Altos y conserva su nivel mientras no se justifique reducción. Retira la conclusión anterior de ausencia general de consulta previa; la determinación y las medidas permanecen abiertas en HD-10. |
+| SGSI-DOC-012 | Evaluación de impacto en protección de datos | Identifica tres riesgos Altos para los interesados y conserva su nivel mientras no se justifique reducirlo. La decisión sobre la consulta previa a la autoridad está abierta, con responsable y plazo (HD-10). |
 
 | Código | Registro | Contenido |
 |---|---|---|
-| SGSI-REG-001/002 | Registro de riesgos + plan de tratamiento (un libro, cinco hojas) | 25 escenarios narrados como cadenas, valorados y tratados eslabón a eslabón, cada uno situado en las interfaces del alcance con vocabulario cerrado. 64 controles, uno por fila, cada uno con dominio, estado, evidencia y periodicidad de verificación: así la regla de convergencia se puede ejecutar por máquina. 16 planes con residual previsto; revalidación y aceptación pendientes en los afectados por la revisión |
-| SGSI-REG-003 | Declaración de Aplicabilidad | 93 controles: 83 aplicables y 10 excluidos en el corte; 13 con deuda documental. Las exclusiones requieren revisión individual al cambiar el alcance. C-039/C-044 dejan de justificar A.8.15 y se conserva su trazabilidad documental en A.5.33. |
+| SGSI-REG-001/002 | Registro de riesgos + plan de tratamiento (un libro, cinco hojas) | 25 escenarios narrados como cadenas, valorados y tratados eslabón a eslabón, cada uno situado en las interfaces del alcance con vocabulario cerrado. 64 controles, uno por fila, cada uno con dominio, estado, evidencia y periodicidad de verificación: así la regla de convergencia se puede ejecutar por máquina. 16 planes con su residual aceptado por el propietario del riesgo y, cuando es Alto, ratificado por el Comité; plazos contados desde la replanificación de 13/11/2026 |
+| SGSI-REG-003 | Declaración de Aplicabilidad | 93 controles: 83 aplicables y 10 excluidos, cada uno justificado. 50 se apoyan en un control del registro, 20 en un documento y 13 constan como deuda documental (NC-2026-002). Las exclusiones se revisan una a una si cambia el alcance |
 | SGSI-REG-004 | Cuaderno único de indicios | Estructura de registro y revisión de correlaciones, con descarte razonado. La reconstrucción es condicional y no garantiza detección en semana 4; la evaluación y la severidad S2 se distinguen. |
 | SGSI-REG-005 | Registro de requisitos legales | RGPD/LOPDGDD, videovigilancia, seguridad privada, fiscal ES/IE, límites al pago en efectivo, coordinación de actividades empresariales, contractuales; NIS2 y DORA evaluados y descartados por escrito |
-| SGSI-REG-006 | No conformidades y deuda de diseño | Once hallazgos de diseño, tres cierres históricos y ocho abiertos. NC-2026-001 registra la carencia contractual ya descrita por HD-08. HD-09 conserva la carencia digital de RSC-020 tras revisar RSC-019; HD-10 recoge privacidad; HD-11, justificaciones de dominios y controles pendientes. Sin eficacia operativa ficticia. |
+| SGSI-REG-006 | No conformidades y deuda de diseño | Once hallazgos de diseño: cuatro cerrados, tres abiertos en plazo y cuatro convertidos en no conformidad. Las cuatro no conformidades están abiertas: el proveedor informático sin contrato de encargo (NC-2026-001), trece controles sin soporte (NC-2026-002), dos escenarios sin cobertura de diseño (NC-2026-003) y, como mayor, los controles físicos sin evidencia y el retraso de los planes críticos (NC-2026-004) |
 | SGSI-REG-008 | Registro de Actividades de Tratamiento (RAT, RGPD art. 30) | Diez tratamientos de datos personales (T-01 a T-10) que el SGSI genera —CCTV, contratas, visitas, cuaderno de indicios, gestión de personal doméstico, verificación de órdenes financieras y banca privada, viajes y agenda, documentación patrimonial/societaria/fiscal ES-IE, presencia pública del principal, y la administración de sistemas por el MSP (correo, NAS, CCTV, domótica)—, cada uno con responsable, encargado, finalidad, base jurídica, colectivo, categorías de datos, plazo de conservación y medidas de seguridad del SGSI que lo protegen. Es la fuente única que SGSI-DOC-011 y SGSI-DOC-012 dan por conocida y no repiten |
-| SGSI-INF-001 | Informe ejecutivo para la propiedad | Informe con corte histórico de julio y revisión documental identificada; no acredita comunicaciones ni implantación no verificadas. |
+| SGSI-INF-001 | Informe ejecutivo para la propiedad | El sistema entero en lenguaje llano, a noviembre de 2026: qué se ha diseñado, qué no está hecho todavía, qué plazo venció sin cumplirse y qué se le pide a la propiedad |
+| SGSI-ACU-004 | Anexo de encargo del tratamiento con el MSP (RGPD art. 28) | Texto aprobado por la Dirección General y pendiente de firma: sigue en Borrador porque un contrato sin firmar no está en vigor |
 
 ## Decisiones de diseño (lo que distingue esto de una plantilla)
 
 1. **El alcance persigue a la información, no al organigrama.** La residencia está dentro; la conducta de la familia se gestiona por acuerdo, no por imposición.
-2. **El riesgo se piensa como cadena.** Cada dominio debe justificarse por la cadena. Se retira C-060 y se reclasifican C-061/C-062/C-064; los controles condicionados no acreditan cobertura general. Se revisan HD-02 y HD-09, y HD-11 recoge las justificaciones todavía pendientes.
+2. **El riesgo se piensa como cadena.** El dominio de un escenario lo decide su cadena, y el de un control, cómo actúa y no en qué soporte vive. La primera versión de la regla exigía físico y digital a todo; produjo controles de relleno y se corrigió.
 3. **La regla se ejecuta, no se declara.** Si un requisito solo se comprueba a mano, deja de comprobarse en cuanto el registro crece. Por eso la regla de convergencia tiene un validador propio, y por eso el registro está diseñado con una fila por control en lugar de una lista dentro de una celda.
 4. **Un control que no se ejecuta no es un control.** La cobertura solo cuenta si está implantada, deja evidencia registrada y su verificación sigue en plazo. Por eso el propio sistema declara que a fecha de corte, sin ningún control del registro implantado, ningún escenario alcanza aún cobertura efectiva.
-5. **El riesgo de todos los días entra en el catálogo.** El registro de la v1.0 estaba construido desde el adversario y daba por buenos la alarma, el vigilante y el conductor porque están contratados. La revisión de campo dio entrada a ocho escenarios de fallo de ejecución y operativa material (RSC-018 a RSC-025), y con ellos el vuelco del caso: de los tres escenarios que alcanzan el nivel máximo del registro, dos no tienen adversario en el origen. Uno de ellos es, sencillamente, que la alarma no se conecta al cerrar.
+5. **El riesgo de todos los días entra en el catálogo.** El primer catálogo estaba construido desde el adversario y daba por buenos la alarma, el vigilante y el conductor porque están contratados. La revisión de campo dio entrada a ocho escenarios de fallo de ejecución y operativa material (RSC-018 a RSC-025), y con ellos el vuelco del caso: de los tres escenarios que alcanzan el nivel máximo del registro, dos no tienen adversario en el origen. Uno de ellos es, sencillamente, que la alarma no se conecta al cerrar.
 6. **La probabilidad es exposición acumulada, no frecuencia.** Que caiga un rayo dentro de casa es imposible; en el campo, con tormenta, en un alto y con paraguas, probable. El rayo es el mismo: cambia dónde estás tú. El nivel máximo exige, además, una señal observada.
 7. **El sistema asume a las personas reales que tiene.** Un principal que no lee documentos técnicos firma una declaración de una página que sí entiende. Un círculo de confianza de décadas se regulariza con acuerdos en lenguaje llano y la autoridad del propio principal, no con un NDA de despacho.
 8. **La segregación de funciones imposible se confiesa y se compensa**, no se finge.
 9. **El SGSI y el RGPD comparten sistema, no vocabulario.** Los tratamientos de datos personales que el SGSI genera —CCTV, cuaderno de indicios, correo del gestor de Irlanda— tienen su propio registro (RAT), su propia base jurídica y, cuando la vigilancia se intensifica sobre personas, su propio juicio de ponderación y su propia evaluación de impacto. No se resuelven por analogía con el registro de riesgos patrimoniales: la escala de esa evaluación mide el riesgo para el interesado, no para el patrimonio, y usa una matriz distinta a propósito.
 
+10. **Un plazo que nadie mira vence sin que conste.** Entre julio y noviembre el diseño se revisó cuatro veces y no se implantó nada. La línea base lo registra como no conformidad mayor en lugar de mover las fechas en silencio, y añade lo que faltaba: alguien que mire el calendario cada mes.
+
 El porqué de cada una, desarrollado: [`docs/fase1-iso27001/decisiones.md`](docs/fase1-iso27001/decisiones.md)
 
-**Estado y fecha de corte.** El caso publica el SGSI **en implantación**, con fecha de corte 24/07/2026. Los plazos de los planes de tratamiento y de la deuda de diseño se cuentan desde ahí. Ningún control del registro de riesgos está en estado implantado, y el sistema lo dice en lugar de disimularlo.
+## Estado del sistema
 
-**Qué queda fuera y por qué:** no se atribuye ejecución real a actas de comité, auditorías o formación. El diseño del ciclo de operación está publicado (DOC-010), junto con registros y ejemplos ficticios identificados. Las referencias históricas a actas y aceptaciones son decisiones narrativas del escenario, no evidencias de reuniones celebradas ni de eficacia. La revisión mantiene abiertas las carencias que todavía requieren decisión, implantación o verificación.
+- **Línea base 2.0, aprobada el 13/11/2026.** Diecinueve documentos vigentes; el anexo del proveedor informático, en Borrador hasta su firma. Qué se aprobó y qué cambió: [línea base de cierre de la Fase 1](docs/fase1-iso27001/linea_base_2026-11-13.md).
+- **En implantación.** Los datos de estado de los controles son los del corte de 24/07/2026, confirmados sin variación el 13/11/2026: ningún control del registro está implantado, y por tanto ningún escenario alcanza todavía cobertura efectiva. El sistema lo dice en lugar de disimularlo.
+- **Plazos.** Los de los planes de tratamiento y los objetivos se cuentan desde la replanificación de 13/11/2026. Los de la deuda de diseño y las no conformidades son fechas ciertas y están en SGSI-REG-006.
+- **Qué es ficción y qué no se simula.** Las sesiones del Comité y sus aprobaciones son decisiones narrativas del escenario, igual que la familia. Lo que no se simula son las evidencias de operación: no hay actas con contenido, informes de auditoría, registros de cierre ni formación impartida, porque nada de eso ha ocurrido.
 
-## Revisión documental vigente en el repositorio
-
-**Revisión editorial del README v1.1 · 12/11/2026:** portada y diagramas alineados con el estado vigente; aclaración del resumen RSC-001. [Deltas y comprobaciones](docs/fase1-iso27001/revision_2026-11-12.md). No cambia la fecha de corte ni acredita implantación.
-
-[Entrega del 27/09/2026](deliverables/fase1/revision_2026-09-27/README.md) · [Deltas y verificaciones](docs/fase1-iso27001/revision_2026-09-27.md). Estado Borrador. La revisión del programa no cierra los pendientes operativos.
-
-## Antecedente de septiembre de 2026
-
-Se corrigen el validador, la clasificación de controles, las reglas contradictorias y la presentación de privacidad. La revisión conserva abiertas las acciones de diseño y verificación que el caso no ha ejecutado. Cambios y límites: [registro de correcciones](docs/fase1-iso27001/correcciones_2026-09.md).
+Las entregas anteriores a la línea base se conservan en [`deliverables/fase1/historico/`](deliverables/fase1/historico/README.md), y las notas de cada revisión, en [`docs/fase1-iso27001/historial/`](docs/fase1-iso27001/historial/).
 
 ## Aviso legal
 
@@ -190,4 +194,4 @@ Dos licencias, porque hay dos tipos de contenido:
 
 ---
 
-*Capas 1 y 2 publicadas y sujetas a revisión. Capas 3 y 4 planificadas y sin iniciar. La futura herramienta de IA se plantea como proyecto final del bootcamp, sobre los riesgos RSC-001, RSC-002 y RSC-015.*
+*Capas 1 y 2 publicadas. Capas 3 y 4 planificadas y sin iniciar. La futura herramienta de IA se plantea como proyecto final del bootcamp, sobre los riesgos RSC-001, RSC-002 y RSC-015.*

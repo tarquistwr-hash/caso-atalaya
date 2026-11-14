@@ -1,6 +1,6 @@
 # Cobertura de los dominios aplicables
 
-Revisión 2.0 · 27/09/2026 · DOC-004 §6 · Borrador pendiente de aprobación.
+SGSI-DOC-004 §6, versión 2.0, vigente desde el 13/11/2026.
 
 Se analizan siempre los dominios físico y digital. La cobertura se exige solo en los que intervengan en cada escenario Alto o Crítico. Los controles disponibles no determinan los dominios del escenario.
 
@@ -29,4 +29,4 @@ flowchart TD
 
 **Resultados.** A fecha de corte (24/07/2026), ninguno de los 24 escenarios filtrados acredita cobertura; RSC-014 conserva la evaluación pendiente. En la demostración del 30/06/2027, 16 cumplen, 7 presentan carencias y 1 está pendiente. [Salida completa](../../tool/convergence-check/ejemplo_demo.txt).
 
-El programa comprueba datos declarados, no abre las evidencias ni sustituye la aceptación del residual. [Justificaciones y deltas](revision_2026-09-27.md).
+El programa comprueba datos declarados, no abre las evidencias ni sustituye la aceptación del residual. [Justificación de los 25 escenarios](historial/revision_2026-09-27.md).

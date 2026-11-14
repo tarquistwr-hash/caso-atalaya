@@ -1,8 +1,8 @@
 # Decisiones de diseño — Fase 1 (ISO/IEC 27001)
 
-> Las secciones 1–24 conservan decisiones históricas. Para la regla actual prevalecen la sección 25, DOC-004 v2.0 y la [revisión del 27/09/2026](revision_2026-09-27.md).
-
 Este documento recoge las decisiones que definen el SGSI del caso y el razonamiento detrás de cada una. Es la pieza que distingue este trabajo de una plantilla rellenada: cualquiera puede descargar un kit de documentos 27001; lo que no viene en el kit es por qué cada cosa es como es **en este contexto**.
+
+Las secciones 1 a 18 y 22 son decisiones de diseño. Las secciones 19 a 21 y 23 a 26 cuentan cómo se revisó el sistema y qué encontró cada revisión, incluidas las dos veces en que hubo que corregir una decisión anterior: la regla de convergencia (sección 24) y el calendario (sección 25). Describen el sistema tal como quedó aprobado en la línea base 2.0 de 13/11/2026.
 
 ---
 
@@ -20,11 +20,13 @@ Este documento recoge las decisiones que definen el SGSI del caso y el razonamie
 
 **Por qué:** el incidente que origina el caso —un encargo delegado a un intermediario local, que se hace visible en el entorno del hijo mayor hasta que es este quien busca el contacto, extracción gradual de rutinas y vigilancia física de confirmación— no es descomponible en pares activo-amenaza sin perder exactamente lo que lo hace peligroso: la secuencia, y el hecho de que quien lo instiga no actúa nunca. Además, una organización de nueve personas puede mantener vivo un catálogo de 25 escenarios; no puede mantener una matriz de cientos de combinaciones, que degenera en un documento muerto que nadie vuelve a abrir.
 
-**La regla con dientes:** los escenarios de nivel Alto o Crítico exigen **cobertura efectiva en los dominios físico y digital**. Un escenario convergente tratado solo con controles digitales, o solo con físicos, se considera **no tratado**. Los controles organizativos son necesarios pero no satisfacen por sí solos ninguna de las dos patas: obligan al analista a decir dónde aterriza cada control, y "procedimiento de verificación" no es un control hasta que se declara si es una llamada, una firma presencial o un segundo canal en una aplicación.
+**La regla con dientes:** en todo escenario se analizan los dominios físico y digital, y los escenarios de nivel Alto o Crítico exigen **cobertura efectiva en cada dominio que su cadena atraviesa**. Un escenario que cruza los dos dominios y está tratado solo con controles digitales, o solo con físicos, se considera **no tratado**. Los controles organizativos son necesarios pero no satisfacen por sí solos ninguna de las dos patas: obligan al analista a decir dónde aterriza cada control, y "procedimiento de verificación" no es un control hasta que se declara si es una llamada, una firma presencial o un segundo canal en una aplicación.
 
 La regla se aplica **al escenario, no a cada control**: un riesgo puede tener cuatro controles físicos y uno digital y cumplir. La confusión contraria —"cada control necesita su gemelo digital"— produce relleno, que es justo lo que la regla quiere evitar. Como candado adicional, cada control debe declarar **qué eslabón de la cadena rompe**; el que no rompe ninguno y está solo para cumplir la regla, se cae.
 
-Esto convierte la tesis de la convergencia en una regla verificable de la metodología, no en un párrafo de introducción. Y es verificable en sentido literal: al ejecutarla sobre el registro completo produjo **nueve incumplimientos**. Siete se corrigieron añadiendo al plan los controles que faltaban en el dominio descubierto —nueve controles en total, siete físicos y dos digitales, C-056 a C-064: dos de esos siete escenarios no tenían ninguna de las dos patas y necesitaron un control en cada dominio—. Los otros dos no: RSC-004 y RSC-016 necesitan rediseñar el tratamiento, no completarlo, y quedan registrados como deuda de diseño con plazo (HD-02). Una regla que solo produce hallazgos que uno sabe arreglar en el momento no es una regla, es un adorno.
+Esto convierte la tesis de la convergencia en una regla verificable de la metodología, no en un párrafo de introducción. Y es verificable en sentido literal: ejecutada sobre el registro, deja a la vista cinco escenarios graves con un dominio aplicable sin control computable en el propio diseño y uno con el análisis de dominios pendiente, todos registrados con responsable y plazo. Una regla que solo produce hallazgos que uno sabe arreglar en el momento no es una regla, es un adorno.
+
+La primera versión de la regla era más simple y estaba mal: exigía los dos dominios a todo escenario grave, cruzara o no los dos. Qué produjo y por qué se corrigió está en la sección 24.
 
 ## 3. El impacto no se promedia
 
@@ -106,11 +108,13 @@ Este mismo criterio se aplica después en otro sitio: cuando el Anexo A no conti
 
 ## 14. Lo que se detecta antes de la auditoría no se llama no conformidad
 
-**Decisión:** la trazabilidad entre el registro de riesgos y la SoA produjo seis hallazgos antes de que existiera auditoría alguna. Se registran como **deuda de diseño**, no como no conformidades, con responsable, plazo y una regla de conversión: vencido el plazo sin cierre, entonces sí lo son.
+**Decisión:** la trazabilidad entre el registro de riesgos y la SoA produjo los primeros hallazgos antes de que existiera auditoría alguna; hoy son once. Se registran como **deuda de diseño**, no como no conformidades, con responsable, plazo y una regla de conversión: vencido el plazo sin cierre, entonces sí lo son.
 
-**Por qué:** en fase de implantación, un control planificado que aún no opera no incumple ningún requisito. Calificar doce controles sin soporte documental y dos riesgos sin convergencia como "no conformidades" inflaría el registro justo antes del primer ciclo y devaluaría el término precisamente cuando más falta hace que signifique algo. Saber cuándo **no** usar la etiqueta es parte del criterio.
+**Por qué:** en fase de implantación, un control planificado que aún no opera no incumple ningún requisito. Calificar de entrada unos controles sin soporte documental y dos riesgos sin cobertura como "no conformidades" inflaría el registro justo antes del primer ciclo y devaluaría el término precisamente cuando más falta hace que signifique algo. Saber cuándo **no** usar la etiqueta es parte del criterio.
 
-**Los hallazgos se publican, no se esconden.** La SoA marca doce controles declarados aplicables que descansaban en una práctica no escrita, y el registro deja dos escenarios sin cobertura convergente. Un sistema que sale limpio a la primera es un sistema que nadie ha comprobado.
+**Los hallazgos se publican, no se esconden.** La SoA marca trece controles declarados aplicables que descansan en una práctica no escrita. Un sistema que sale limpio a la primera es un sistema que nadie ha comprobado.
+
+**Y la regla de conversión se aplica.** Una deuda con plazo que nunca vence es una lista de buenas intenciones. En la línea base de noviembre, tres entradas con el plazo vencido pasaron a no conformidad —una de ellas mayor—, y una cuarta lo era desde antes porque la ley no espera a ningún plazo interno: el proveedor informático accede a datos personales sin contrato de encargo. El detalle está en la sección 25.
 
 ## 15. Se registran también los hallazgos ya corregidos
 
@@ -212,7 +216,35 @@ Y la distinción entre quién acepta y quién ratifica no es formalismo: la norm
 
 **Nota de método.** Esta misma ronda generó y descartó un hallazgo propio sobre SGSI-DOC-001 §9, al comparar su afirmación contra la hoja equivocada del registro de riesgos —la hoja «Controles», a nivel de control individual, en vez de la SoA, a nivel de Anexo A: dos «PARCIAL» distintos, en dos documentos distintos, con dos objetos distintos—. Se retractó tras verificar contra la hoja correcta, sin tocar ningún documento por ese motivo. Se deja escrito porque una revisión que solo registra los hallazgos que confirma, y no los que descarta, no es una revisión: es una lista de aciertos.
 
-Versiones vigentes tras esta ronda: SGSI-DOC-005 v1.6, SGSI-DOC-006 v1.5, SGSI-DOC-012 v1.1, SGSI-REG-003 v1.7, SGSI-REG-006 v1.7 — sin cambios en el resto del corpus.
+## 24. La regla original producía el relleno que quería evitar
+
+**Decisión:** la regla de convergencia ya no exige cobertura física y digital a todo escenario Alto o Crítico. Exige analizar los dos dominios en los 25 escenarios, justificar por escrito cuáles atraviesa cada cadena y cubrir esos. El dominio del escenario lo decide su cadena; el de un control, cómo actúa la medida y no en qué soporte vive; el bloque del Anexo A no decide ninguno de los dos.
+
+**Por qué:** la regla original era fácil de enunciar y de programar, y tenía un defecto que tardó dos meses en verse: obligaba a encontrar un control físico para un error de destinatario en un correo, o uno digital para un sobre de efectivo. El resultado fue exactamente el relleno que la sección 2 dice querer evitar. Un control de destrucción de papel (C-060) acabó asignado a un escenario de fuga por correo, en un eslabón que la cadena no tenía. Una palabra de control y una instrucción firmada al banco figuraban como controles "digitales" porque hacía falta uno. Dos registros llevados en papel contaban como cobertura digital. El validador daba verde y el verde no significaba nada.
+
+Al corregirlo, la demostración pasó de diecinueve escenarios cubiertos a dieciséis, y eso es una mejora: los tres que se pierden nunca estuvieron cubiertos. C-060 se retira sin reutilizar su identificador. C-061, C-062 y C-064 pasan a organizativos. La confirmación presencial desde 50.000 € (C-059, C-065) se declara de alcance condicionado y deja de contar como cobertura general. C-016 y C-019 quedan con su mecanismo digital pendiente de acreditar. Y RSC-014 queda con el dominio físico pendiente, porque su cadena habla de coacción sin decir por qué medio, y ni excluirlo ni darlo por bueno sería honesto.
+
+**Lo que se lleva:** una regla verificable por máquina no es mejor que el criterio con el que se etiquetan sus datos. El programa comprueba coherencia; decidir si un registro en papel es un control digital sigue siendo trabajo de una persona. Por eso el resultado del validador se presenta siempre con su límite: cumplir la regla no equivale a aceptar el riesgo residual.
+
+## 25. Un plazo que nadie mira vence sin que conste
+
+**Decisión:** la línea base 2.0, aprobada por el Comité el 13/11/2026, hace tres cosas a la vez: aprueba los veinte documentos del sistema, aplica la regla de conversión a la deuda de diseño vencida y replanifica la implantación diciendo por qué hizo falta.
+
+**Por qué:** entre julio y noviembre el sistema se revisó cuatro veces y no se implantó nada. Cada revisión mejoró el diseño, y ninguna miró el calendario. Los planes a dos meses —el cierre diario de la residencia y las recogidas de la familia, los dos más urgentes— vencieron en septiembre sin un solo control operativo, y el seguimiento trimestral de objetivos no se celebró. Las revisiones de septiembre lo anotaron como «vencimiento pendiente de decisión», que es la forma educada de no decidir.
+
+La línea base decide. La deuda de diseño vencida se convierte en no conformidad, como manda la regla de la sección 14: los trece controles sin soporte (NC-2026-002), los escenarios sin cobertura de diseño (NC-2026-003) y, como no conformidad **mayor**, la inejecución de los controles físicos junto con el retraso de los planes que tratan escenarios críticos (NC-2026-004). La causa registrada no es que alguien fallara: es que el sistema medía el diseño y nadie medía el calendario. La acción correctiva incluye lo que faltaba: el Comité contrasta los plazos cada mes, y esa comprobación pasa a ser la quinta medición de la cláusula 9.1. Los plazos de los planes y de los objetivos se cuentan desde el 13/11/2026.
+
+HD-06 se cierra, porque su acción —la comprobación automática de coherencia entre la SoA y el registro— existe, se ejecuta en cada cambio y pasa. El anexo del proveedor informático (SGSI-ACU-004) queda en Borrador a propósito: la Dirección General ha aprobado su texto, pero un contrato sin firmar no está en vigor, y la no conformidad sigue abierta hasta la firma.
+
+**Sobre la aprobación.** Las sesiones del Comité son parte de la ficción, como lo eran las de julio y agosto. Durante dos meses los documentos estuvieron en Borrador para no «inventar un acta». Era un escrúpulo mal colocado: lo que no se simula en este caso son las evidencias de operación —registros de cierre, actas con contenido, informes de auditoría—, no las decisiones de gobierno que el propio diseño exige. Un SGSI cuyos veinte documentos están sin aprobar no es más honesto; es un SGSI sin dirección.
+
+## 26. Una sola plantilla y un historial que se puede leer
+
+**Decisión:** los veinte documentos de la línea base salen con la misma plantilla, la misma cabecera de control y un historial de versiones resumido. El detalle de cada revisión anterior se conserva en las versiones obsoletas del repositorio.
+
+**Por qué:** en cuatro meses algunos documentos acumularon once versiones, varias aprobadas el mismo día, y las últimas revisiones se habían añadido como párrafos al final de cada documento —«Revisión de septiembre:», «Seguimiento 27/09/2026»— en lugar de integrarse en la sección que modificaban. El control documental existe para que un lector sepa qué está vigente, no para demostrar cuántas veces se ha corregido. Un procedimiento se escribe en presente; lo que cambió y cuándo va en el historial.
+
+La regla queda escrita en SGSI-DOC-002 §3: una línea base aprobada por el Comité incrementa el entero de la versión en todos los documentos que la integran, y el historial resume lo anterior. Los seis registros en Excel conservan su libro editable y se publican además como PDF de lectura con la misma plantilla que los documentos Word, porque una tabla de dieciocho columnas impresa en una página no la lee nadie.
 
 ## El caso frente a los datos del sector
 
@@ -228,21 +260,6 @@ La conclusión de diseño: este caso no inventa amenazas exóticas para lucirse.
 
 ---
 
-*Estas decisiones están implementadas en los documentos de [`/deliverables/fase1/`](../../deliverables/fase1/); este documento solo las argumenta. Si lees alguna y piensas "eso en mi organización no colaría", esa conversación es exactamente para lo que existe este caso.*
+*Estas decisiones están implementadas en los documentos de [`/deliverables/fase1/vigente/`](../../deliverables/fase1/README.md); este documento solo las argumenta. Si lees alguna y piensas "eso en mi organización no colaría", esa conversación es exactamente para lo que existe este caso.*
 
 
-## 24. Revisión documental de septiembre de 2026
-
-Se conserva el soporte en papel de C-039/C-044 y se retira su dominio DIGITAL, sin inventar sistemas. La simulación pasa de 19 a 17 escenarios con cobertura. La confirmación presencial se exige desde 50.000 euros, también para el principal. ACU-004 identifica el anexo MSP; ACU-003 permanece reservado a confidencialidad de la representante. Las conclusiones de privacidad se limitan a lo demostrado y se conserva el seguimiento de medidas y residual pendientes. La fase de implantación no excluye por sí sola incumplimientos ya exigibles.
-
-[Tabla de cambios, comprobaciones y acciones abiertas](correcciones_2026-09.md). Las secciones anteriores conservan el razonamiento histórico; no acreditan cierre de los hallazgos posteriores.
-
-## 25. Analizar ambos dominios y exigir solo los aplicables
-
-**Decisión del 27/09/2026:** la exigencia universal de físico y digital no reflejaba el criterio del autor. Se analizan ambos en los 25 escenarios y se justifica su aplicabilidad. La columna de dominios ya existía en el CSV, pero el programa no la leía. La versión 2.0 la utiliza y separa evaluación pendiente de no aplicabilidad.
-
-El dominio del escenario se determina por su cadena; el dominio de una medida por cómo actúa; el bloque del Anexo A no sustituye ninguno de esos análisis. Una medida complementaria no introduce un eslabón nuevo. C-060 se retira; C-061/C-062/C-064 son organizativos. C-059/C-065 tienen umbral de 50.000 euros, C-058/C-063 límites de uso material, y C-016/C-019 conservan su cobertura digital pendiente de acreditar. C-065 es una fila de trazabilidad de una regla ya existente en DOC-007, no una nueva obligación ni un sistema añadido.
-
-HD-02 y HD-09 se reevalúan sin cierre automático. HD-11 sustituye la propuesta externa de exigir físico a RSC-007/RSC-024 y registra los pendientes de justificación. Las puntuaciones residuales se conservan como previsiones que necesitan revalidación en los planes afectados; no se declara eficacia.
-
-La prueba automática compara resultados por escenario y Excel–CSV–SoA, con las excepciones documentadas. Que pase una prueba significa coherencia de datos y lógica, no seguridad implantada ni aceptación del riesgo. Los límites y las 25 justificaciones están en la revisión enlazada arriba.

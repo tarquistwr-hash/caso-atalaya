@@ -1,10 +1,12 @@
 # Revisión documental de septiembre de 2026
 
+> **Nota histórica.** Revisión anterior a la [línea base 2.0 de 13/11/2026](../linea_base_2026-11-13.md). Describe el estado de entonces; las versiones y estados que cita están obsoletos.
+
 > Entrega anterior conservada. La [revisión del 27/09/2026](revision_2026-09-27.md) actualiza la regla y sus resultados. Esta página describe el antecedente y no la situación revisada. Nota de enlace añadida el 27/09/2026.
 
 Versión 1.0 · 21/09/2026 · Autor: autor del caso · Escenario ficticio · Aprobación documental pendiente.
 
-Se revisan 14 Word y 6 Excel originales y se exportan sus 20 PDF, disponibles en el [índice de entrega](../../deliverables/fase1/revision_2026-09/README.md). Cada documento tiene versión e historial propios. Se conservan los PDF anteriores. La fecha de corte sigue siendo 24/07/2026: esta publicación no acredita implantación, firma, aprobación del Comité ni eficacia.
+Se revisan 14 Word y 6 Excel originales y se exportan sus 20 PDF, disponibles en el [índice de entrega](../../../deliverables/fase1/historico/2026-09/README.md). Cada documento tiene versión e historial propios. Se conservan los PDF anteriores. La fecha de corte sigue siendo 24/07/2026: esta publicación no acredita implantación, firma, aprobación del Comité ni eficacia.
 
 ## Tabla de impacto: antes / después
 

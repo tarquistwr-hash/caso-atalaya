@@ -12,9 +12,9 @@ from project import cargar, clasificacion, ESCALAS
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-ENTREGA = ROOT / "deliverables/fase1/revision_2026-09-27"
+ENTREGA = ROOT / "deliverables/fase1/vigente"
 REG = ENTREGA / "SGSIREG001002_Registro_y_Plan_Riesgos_v2_0.xlsx"
-SOA = ENTREGA / "SGSIREG003_Declaracion_Aplicabilidad_v1_10.xlsx"
+SOA = ENTREGA / "SGSIREG003_Declaracion_Aplicabilidad_v2_0.xlsx"
 RFIELDS = ["codigo", "titulo", "dominios", *ESCALAS, "propietario", "justificacion_dominios"]
 CFIELDS = ["id_control", "id_riesgo", "descripcion", "dominio", "estado", "evidencia", "periodicidad_dias", "fecha_ultima_verificacion", "alcance_cobertura", "condicion"]
 SIMULADOS = {"estado", "evidencia", "fecha_ultima_verificacion"}
@@ -128,7 +128,7 @@ def ejecutar(exportar=False):
             if c[k]!=source[c['id_control']][k]:
                 raise ValueError(f"Demostración {c['id_control']}: difiere {k}")
     return {"riesgos":len(riesgos),"controles":len(controles),"soa":93,"excepciones":excepciones,
-            "limite":"Comprueba datos y estados declarados; no verifica evidencias ni cierra HD-01/HD-06 por sí solo."}
+            "limite":"Comprueba datos y estados declarados; no verifica el contenido de las evidencias ni acredita implantación."}
 
 
 if __name__=="__main__":
