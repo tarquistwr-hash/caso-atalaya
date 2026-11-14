@@ -3,27 +3,28 @@
 | Campo | Valor |
 |---|---|
 | Código | ESC-001 |
-| Versión | 2.2 |
-| Estado | Revisión documental — pendiente de aprobación dentro del caso |
+| Versión | 2.3 |
+| Estado | Vigente |
 | Clasificación | Pública — aprobada expresamente para difusión exterior por ser escenario ficticio |
 | Propietario | Comité de Seguridad Convergente |
 | Autor | Alejandro Tarquis Melgares |
 | Fecha de emisión | 03/04/2026 |
-| Fecha de aprobación | Pendiente para v2.2; antecedente v2.1: 24/07/2026 |
-| Aprobado por | Pendiente para esta revisión |
-| Registro de aprobación | La aprobación histórica corresponde a v2.1 dentro de la ficción; esta revisión no acredita nueva aprobación ni implantación |
+| Fecha de aprobación | 13/11/2026 |
+| Aprobado por | Comité de Seguridad Convergente |
+| Registro de aprobación | Acta del Comité de 13/11/2026 (línea base 2.0; aprobación dentro de la ficción) |
 
 **Historial de versiones**
 
 | Versión | Fecha | Cambios |
 |---|---|---|
-| 2.2 | 12/10/2026 | Corrección editorial de §11: se retira la clasificación anticipada de la futura IA y se alinea con el README publicado. Clasificación jurídica y requisitos pendientes del uso concreto; capas 3 y 4 sin iniciar. Sin cambios en riesgos, controles, RAT ni corte operativo. [Delta y revisión en cascada](../fase1-iso27001/revision_2026-10-12.md). |
 | 0.1 | 03/04/2026 | Borrador inicial (principal estadounidense) |
 | 0.2 | 07/04/2026 | Principal irlandés con pasado penal juvenil; hijo mayor influencer; estructura patrimonial Irlanda↔España |
 | 0.3 | 09/04/2026 | Corrección de cronología familiar |
 | 1.0 | 10/04/2026 | Cierre del escenario como base de la Fase 1 |
 | 2.0 | 24/07/2026 | **Revisión de criterio de campo.** Salto de versión entera conforme a SGSI-DOC-002 §3: la reescritura del detonante y de la cadena de detección cambia el escenario sobre el que se construye todo el sistema, que es a esta ficha lo que el alcance es al SGSI. Es el único cambio de entero del ciclo, y por eso se declara.  Reescritura del detonante: el instigador pasa de figura del entorno de Dublín a antiguo promotor deportivo con discrepancia económica, y ejecuta a través de un intermediario local. Reescritura de la cadena de detección: por reconocimiento de un vehículo, no por análisis. Desidentificación reforzada. Alta de la sección 8 (los fallos de ejecución), aportación directa de campo que reorienta el catálogo de riesgos. Cierre de los puntos que la v1.0 dejaba abiertos a revisión |
 | 2.1 | 24/07/2026 | Revisión de coherencia con el resto del corpus. Corrección de la ventana temporal de los títulos en §1, que §12 declaraba retirada y seguía presente. Precisión de la composición de la estructura de Atalaya (§4): nueve personas, de las cuales siete empleados y dos externos estables, que es lo que sostiene el resto del sistema. Atribución de la administración de la domótica al MSP (§5), coherente con los cinco documentos que se apoyan en ella. Fechado del cuasi-incidente (§7). Cierre en §10 de la identidad de la representante de la propiedad. Corrección de la referencia cruzada del registro de revisión. Cabecera de control documental alineada con SGSI-DOC-002 §2 y §3 |
+| 2.2 | 12/10/2026 | Corrección de §11: se retira la clasificación jurídica anticipada de la futura herramienta de IA; se determinará sobre su uso concreto. |
+| 2.3 | 13/11/2026 | Línea base de cierre de la Fase 1. Convención de nomenclatura: también el informe ejecutivo designa a los miembros de la familia por su rol. Sin cambios en los hechos del escenario. |
 
 > **Aviso:** Este escenario es íntegramente ficticio. Personas, sociedades, patrimonios y hechos son inventados y no guardan relación con ninguna persona u organización real. La verosimilitud procede de la experiencia profesional del autor en protección patrimonial, no de ningún caso concreto.
 
@@ -60,7 +61,7 @@
 | Sofía G. | 14 | Instagram privado pero con ~900 "amigos" aceptados sin criterio. Colegio internacional identificable en fotos. |
 | Liam G. | 6 | Sin RRSS propias. Aparece en publicaciones de terceros (cumpleaños, colegio). |
 
-> **Convención de nomenclatura.** En los documentos del SGSI, Cian se designa siempre como **«el hijo mayor»** y nunca por su nombre: son documentos formales que circulan entre plantilla y terceros. Los nombres propios se usan únicamente en esta ficha y en el informe ejecutivo a la propiedad (SGSI-INF-001), que se dirige a sus padres y está escrito en lenguaje llano. «El hijo menor» designa a Liam y a nadie más.
+> **Convención de nomenclatura.** En los documentos del SGSI, Cian se designa siempre como **«el hijo mayor»** y nunca por su nombre: son documentos formales que circulan entre plantilla y terceros. Los nombres propios se usan únicamente en esta ficha; el informe ejecutivo a la propiedad (SGSI-INF-001) también usa los roles, porque circula por el Comité. «El hijo menor» designa a Liam y a nadie más.
 
 ## 3. Estructura patrimonial (simplificada)
 

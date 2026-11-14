@@ -1,6 +1,8 @@
 # Revisión documental de septiembre de 2026
 
-> Entrega anterior conservada. La [revisión del 27/09/2026](../revision_2026-09-27/README.md) actualiza la regla y sus resultados. Esta página describe el antecedente y no la situación revisada. Nota de enlace añadida el 27/09/2026.
+> **Entrega obsoleta.** Sustituida por la [línea base 2.0 de 13/11/2026](../../README.md). Se conserva como histórico.
+
+> Entrega anterior conservada. La [revisión del 27/09/2026](../2026-09-27/README.md) actualiza la regla y sus resultados. Esta página describe el antecedente y no la situación revisada. Nota de enlace añadida el 27/09/2026.
 
 Versión de entrega 1.1 · 20/09/2026 · Escenario ficticio.
 
@@ -31,6 +33,6 @@ Orden de lectura: escenario e índice general; DOC-004 y REG-001/002; REG-003; p
 | SGSIREG006 No Conformidades · 1.9 | [XLSX](SGSIREG006_No_Conformidades_v1_9.xlsx) | [PDF](SGSIREG006_No_Conformidades_v1_9.pdf) |
 | SGSIREG008 Registro Actividades Tratamiento · 1.1 | [XLSX](SGSIREG008_Registro_Actividades_Tratamiento_v1_1.xlsx) | [PDF](SGSIREG008_Registro_Actividades_Tratamiento_v1_1.pdf) |
 
-[Tabla de cambios y verificación](../../../docs/fase1-iso27001/correcciones_2026-09.md).
+[Tabla de cambios y verificación](../../../../docs/fase1-iso27001/historial/correcciones_2026-09.md).
 
 Las anteriores DOC-009 v1.4, REG-004 v1.2 y REG-006 v1.7 no se han localizado en el respaldo. No se reconstruyen ni se presentan como disponibles.

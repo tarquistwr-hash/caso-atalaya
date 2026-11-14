@@ -1,6 +1,6 @@
 # RSC-001 — La cadena, eslabón a eslabón
 
-**Revisión editorial v1.1 · 12/11/2026 · Borrador.** Corte operativo: 24/07/2026. Se distingue tratamiento diseñado, relato histórico y eficacia no acreditada. [Historial y deltas](revision_2026-11-12.md).
+Diagrama de apoyo de SGSI-DOC-004 (Anexo B) y de SGSI-REG-001. Estado de los controles a fecha de corte, 24/07/2026: se distingue el tratamiento diseñado de su eficacia, que no está acreditada.
 
 El riesgo que originó el SGSI, dibujado como lo trata la metodología (SGSI-DOC-004): una cadena de seis eslabones que cruza los dominios digital, organizativo y físico, con cada control del plan de tratamiento situado sobre el eslabón que rompe.
 

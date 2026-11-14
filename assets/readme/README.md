@@ -14,4 +14,4 @@ Estos recursos ilustran la documentación y se distribuyen bajo CC BY-NC 4.0, co
 
 Historial: v1.0, 12/11/2026, incorporación de las tres piezas aprobadas visualmente por el autor del proyecto. Esta selección editorial no equivale a aprobación formal de documentos del SGSI.
 
-Revisión y deltas: [registro editorial](../../docs/fase1-iso27001/revision_2026-11-12.md).
+Revisión y deltas: [registro editorial](../../docs/fase1-iso27001/historial/revision_2026-11-12.md).

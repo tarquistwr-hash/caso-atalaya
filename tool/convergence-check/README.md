@@ -29,7 +29,7 @@ python -m pytest -q
 | `test_project.py` | Pruebas de lógica, entradas, ejecución y resultados del corpus. |
 | `ejemplo_corte.txt`, `ejemplo_demo.txt` | Salidas reproducibles; no son evidencias operativas. |
 
-Fuentes: [registro v2.0 y Declaración de Aplicabilidad v1.10](../../deliverables/fase1/revision_2026-09-27/README.md). C-060 se retira sin reutilizar el identificador; C-065 traza una regla presencial existente de DOC-007, con su umbral.
+Fuentes: [registro de riesgos y Declaración de Aplicabilidad vigentes](../../deliverables/fase1/README.md). C-060 se retira sin reutilizar el identificador; C-065 traza una regla presencial existente de DOC-007, con su umbral.
 
 ## Qué se comprueba
 
@@ -61,4 +61,4 @@ El comprobador del corpus verifica también la numeración de eslabones y el res
 - **1.1 — 20/09/2026:** rechazo de fechas futuras/evidencia en blanco y sincronización documental.
 - **1.0:** publicación inicial para CS50P.
 
-Escenario ficticio. [Entrega y deltas](../../docs/fase1-iso27001/revision_2026-09-27.md).
+Escenario ficticio. [Justificación de dominios por escenario](../../docs/fase1-iso27001/historial/revision_2026-09-27.md).

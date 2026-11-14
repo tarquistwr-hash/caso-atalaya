@@ -1,0 +1,202 @@
+[
+  {
+    "codigo": "SGSI-DOC-001",
+    "titulo": "Contexto de la organización y alcance",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC001_Contexto_y_Alcance_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC001_Contexto_y_Alcance_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-002",
+    "titulo": "Control de la información documentada",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC002_Control_Documental_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC002_Control_Documental_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-003",
+    "titulo": "Política de seguridad de la información",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC003_Politica_Seguridad_Informacion_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC003_Politica_Seguridad_Informacion_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-004",
+    "titulo": "Metodología de gestión de riesgos",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC004_Metodologia_Gestion_Riesgos_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC004_Metodologia_Gestion_Riesgos_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-005",
+    "titulo": "Objetivos de seguridad 2026-27",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC005_Objetivos_Seguridad_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC005_Objetivos_Seguridad_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-006",
+    "titulo": "Terceros y círculo de confianza",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC006_Terceros_Circulo_Confianza_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC006_Terceros_Circulo_Confianza_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-007",
+    "titulo": "Verificación de órdenes financieras",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC007_Verificacion_Ordenes_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC007_Verificacion_Ordenes_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-008",
+    "titulo": "Seguridad en viajes y desplazamientos",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC008_Seguridad_Viajes_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC008_Seguridad_Viajes_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-009",
+    "titulo": "Gestión de incidentes convergentes",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC009_Gestion_Incidentes_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC009_Gestion_Incidentes_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-010",
+    "titulo": "Auditoría, revisión por la dirección y mejora",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Confidencial",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC010_Auditoria_Revision_Mejora_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC010_Auditoria_Revision_Mejora_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-011",
+    "titulo": "Ponderación del interés legítimo (RGPD art. 6.1.f)",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Confidencial",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC011_Ponderacion_Interes_Legitimo_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC011_Ponderacion_Interes_Legitimo_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-DOC-012",
+    "titulo": "Evaluación de impacto en protección de datos (RGPD art. 35)",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Confidencial",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIDOC012_EIPD_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIDOC012_EIPD_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-INF-001",
+    "titulo": "Informe ejecutivo para la propiedad",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Confidencial",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIINF001_Informe_Ejecutivo_Propiedad_v2_0.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIINF001_Informe_Ejecutivo_Propiedad_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-ACU-004",
+    "titulo": "Anexo de encargo del tratamiento con el MSP (RGPD art. 28)",
+    "version": "0.3",
+    "estado": "Borrador",
+    "clasificacion": "Confidencial",
+    "aprobacion": null,
+    "editable": "deliverables/fase1/vigente/SGSIACU004_Anexo_MSP_v0_3.docx",
+    "pdf": "deliverables/fase1/vigente/SGSIACU004_Anexo_MSP_v0_3.pdf"
+  },
+  {
+    "codigo": "SGSI-REG-001/002",
+    "titulo": "Registro de riesgos y plan de tratamiento",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Restringida",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIREG001002_Registro_y_Plan_Riesgos_v2_0.xlsx",
+    "pdf": "deliverables/fase1/vigente/SGSIREG001002_Registro_y_Plan_Riesgos_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-REG-003",
+    "titulo": "Declaración de Aplicabilidad",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIREG003_Declaracion_Aplicabilidad_v2_0.xlsx",
+    "pdf": "deliverables/fase1/vigente/SGSIREG003_Declaracion_Aplicabilidad_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-REG-004",
+    "titulo": "Cuaderno único de indicios",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Confidencial",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIREG004_Cuaderno_Indicios_v2_0.xlsx",
+    "pdf": "deliverables/fase1/vigente/SGSIREG004_Cuaderno_Indicios_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-REG-005",
+    "titulo": "Registro de requisitos legales",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Interna",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIREG005_Registro_Requisitos_Legales_v2_0.xlsx",
+    "pdf": "deliverables/fase1/vigente/SGSIREG005_Registro_Requisitos_Legales_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-REG-006",
+    "titulo": "No conformidades y deuda de diseño",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Confidencial",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIREG006_No_Conformidades_v2_0.xlsx",
+    "pdf": "deliverables/fase1/vigente/SGSIREG006_No_Conformidades_v2_0.pdf"
+  },
+  {
+    "codigo": "SGSI-REG-008",
+    "titulo": "Registro de Actividades de Tratamiento (RGPD art. 30)",
+    "version": "2.0",
+    "estado": "Vigente",
+    "clasificacion": "Confidencial",
+    "aprobacion": "13/11/2026",
+    "editable": "deliverables/fase1/vigente/SGSIREG008_Registro_Actividades_Tratamiento_v2_0.xlsx",
+    "pdf": "deliverables/fase1/vigente/SGSIREG008_Registro_Actividades_Tratamiento_v2_0.pdf"
+  }
+]
